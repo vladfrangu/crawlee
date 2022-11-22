@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2022-11-22)
+
+
+### Features
+
+* export test constant for changelog ([4bbded1](https://github.com/apify/crawlee/commit/4bbded1dd12fb654f773ab9fd68ac6b1acec4851))
+
+
+
+
+
 ## 3.1.4 (2022-11-22)
 
 
