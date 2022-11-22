@@ -1,4 +1,4 @@
-import type { Dictionary } from '@crawlee/types';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import type { CheerioAPI } from 'cheerio';
 import { load } from 'cheerio';
 

@@ -1,4 +1,4 @@
-import type { Dictionary } from '@crawlee/types';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import type { CrawlingContext } from './crawlers/crawler_commons';
 import type { Awaitable } from './typedefs';
 import type { Request } from './request';
@@ -17,12 +17,12 @@ type GetUserDataFromRequest<T> = T extends Request<infer Y> ? Y : never;
  * Simple router that works based on request labels. This instance can then serve as a `requestHandler` of your crawler.
  *
  * ```ts
- * import { Router, CheerioCrawler, CheerioCrawlingContext } from 'crawlee';
+ * import { Router, CheerioCrawler, CheerioCrawlingContext } from '@vladfrangu-dev/crawlee';
  *
  * const router = Router.create<CheerioCrawlingContext>();
  *
  * // we can also use factory methods for specific crawling contexts, the above equals to:
- * // import { createCheerioRouter } from 'crawlee';
+ * // import { createCheerioRouter } from '@vladfrangu-dev/crawlee';
  * // const router = createCheerioRouter();
  *
  * router.addHandler('label-a', async (ctx) => {
@@ -41,7 +41,7 @@ type GetUserDataFromRequest<T> = T extends Request<infer Y> ? Y : never;
  * Alternatively we can use the default router instance from crawler object:
  *
  * ```ts
- * import { CheerioCrawler } from 'crawlee';
+ * import { CheerioCrawler } from '@vladfrangu-dev/crawlee';
  *
  * const crawler = new CheerioCrawler();
  *
@@ -138,7 +138,7 @@ export class Router<Context extends CrawlingContext> {
      * Creates new router instance. This instance can then serve as a `requestHandler` of your crawler.
      *
      * ```ts
-     * import { Router, CheerioCrawler, CheerioCrawlingContext } from 'crawlee';
+     * import { Router, CheerioCrawler, CheerioCrawlingContext } from '@vladfrangu-dev/crawlee';
      *
      * const router = Router.create<CheerioCrawlingContext>();
      * router.addHandler('label-a', async (ctx) => {

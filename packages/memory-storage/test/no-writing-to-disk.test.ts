@@ -1,6 +1,6 @@
 import { readdir, rm } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { MemoryStorage } from '@crawlee/memory-storage';
+import { MemoryStorage } from '@vladfrangu-dev/crawlee-memory-storage';
 import { waitTillWrittenToDisk } from './__shared__';
 
 describe('persistStorage option', () => {

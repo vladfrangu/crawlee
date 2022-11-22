@@ -1,8 +1,8 @@
 import ow from 'ow';
 import type { Browser } from 'puppeteer';
-import { PuppeteerPlugin } from '@crawlee/browser-pool';
-import type { BrowserLaunchContext } from '@crawlee/browser';
-import { BrowserLauncher, Configuration } from '@crawlee/browser';
+import { PuppeteerPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
+import type { BrowserLaunchContext } from '@vladfrangu-dev/crawlee-browser';
+import { BrowserLauncher, Configuration } from '@vladfrangu-dev/crawlee-browser';
 
 /**
  * Apify extends the launch options of Puppeteer.

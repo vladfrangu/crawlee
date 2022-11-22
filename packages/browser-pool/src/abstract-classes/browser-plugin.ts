@@ -1,5 +1,5 @@
 import merge from 'lodash.merge';
-import type { Dictionary } from '@crawlee/types';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import type { LaunchContextOptions } from '../launch-context';
 import { LaunchContext } from '../launch-context';
 import type { BrowserController } from './browser-controller';

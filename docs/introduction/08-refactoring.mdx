@@ -1,6 +1,6 @@
 ---
 id: refactoring
-title: "Refactoring"
+title: 'Refactoring'
 description: Your first steps into the world of scraping with Crawlee
 ---
 
@@ -23,14 +23,14 @@ Anyway, to promote good coding practices, let's look at how you can use a <ApiLi
 
 In the following code we've made several changes:
 
-- Split the code into multiple files.
-- Replaced `console.log` with the Crawlee logger for nicer, colourful logs.
-- Added a `Router` to make our routing cleaner, without `if` clauses.
+-   Split the code into multiple files.
+-   Replaced `console.log` with the Crawlee logger for nicer, colourful logs.
+-   Added a `Router` to make our routing cleaner, without `if` clauses.
 
 In our `main.mjs` file, we place the general structure of the crawler:
 
 ```js title="src/main.mjs"
-import { PlaywrightCrawler, log } from 'crawlee';
+import { PlaywrightCrawler, log } from '@vladfrangu-dev/crawlee';
 import { router } from './routes.js';
 
 // This is better set with CRAWLEE_LOG_LEVEL env var
@@ -54,7 +54,7 @@ await crawler.run();
 Then in a separate `routes.mjs` file:
 
 ```js title="src/routes.mjs"
-import { createPlaywrightRouter, Dataset } from 'crawlee';
+import { createPlaywrightRouter, Dataset } from '@vladfrangu-dev/crawlee';
 
 // createPlaywrightRouter() is only a helper to get better
 // intellisense and typings. You can use Router.create() too.
@@ -62,10 +62,14 @@ export const router = createPlaywrightRouter();
 
 // This replaces the request.label === DETAIL branch of the if clause.
 router.addHandler('DETAIL', async ({ request, page, log }) => {
-    log.debug(`Extracting data: ${request.url}`)
+    log.debug(`Extracting data: ${request.url}`);
     const urlParts = request.url.split('/').slice(-2);
-    const modifiedTimestamp = await page.locator('time[datetime]').getAttribute('datetime');
-    const runsRow = page.locator('ul.ActorHeader-stats > li').filter({ hasText: 'Runs' });
+    const modifiedTimestamp = await page
+        .locator('time[datetime]')
+        .getAttribute('datetime');
+    const runsRow = page
+        .locator('ul.ActorHeader-stats > li')
+        .filter({ hasText: 'Runs' });
     const runCountString = await runsRow.locator('span').last().textContent();
 
     const results = {
@@ -76,27 +80,27 @@ router.addHandler('DETAIL', async ({ request, page, log }) => {
         description: await page.locator('span.actor-description').textContent(),
         modifiedDate: new Date(Number(modifiedTimestamp)),
         runCount: Number(runCountString.replaceAll(',', '')),
-    }
+    };
 
-    log.debug(`Saving data: ${request.url}`)
+    log.debug(`Saving data: ${request.url}`);
     await Dataset.pushData(results);
 });
 
 // This is a fallback route which will handle the start URL
 // as well as the LIST labelled URLs.
 router.addDefaultHandler(async ({ request, page, enqueueLinks, log }) => {
-    log.debug(`Enqueueing pagination: ${request.url}`)
+    log.debug(`Enqueueing pagination: ${request.url}`);
     await page.waitForSelector('.ActorStorePagination-pages a');
     await enqueueLinks({
         selector: '.ActorStorePagination-pages > a',
         label: 'LIST',
-    })
-    log.debug(`Enqueueing actor details: ${request.url}`)
+    });
+    log.debug(`Enqueueing actor details: ${request.url}`);
     await page.waitForSelector('.ActorStoreItem');
     await enqueueLinks({
         selector: '.ActorStoreItem',
         label: 'DETAIL', // <= note the different label
-    })
+    });
 });
 ```
 

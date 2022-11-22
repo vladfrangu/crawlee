@@ -1,4 +1,4 @@
-import { launchPuppeteer, utils } from 'crawlee';
+import { launchPuppeteer, utils } from '@vladfrangu-dev/crawlee';
 
 const url = 'http://www.example.com/';
 // Start a browser

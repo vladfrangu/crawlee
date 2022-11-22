@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { JSDOMCrawler, Dataset } from '@crawlee/jsdom';
+import { JSDOMCrawler, Dataset } from '@vladfrangu-dev/crawlee-jsdom';
 import { ApifyStorageLocal } from '@apify/storage-local';
 
 if (process.env.STORAGE_IMPLEMENTATION === 'LOCAL') {

@@ -128,7 +128,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * always limit `desiredConcurrency` to the value of `maxConcurrency` ([bcb689d](https://github.com/apify/crawlee/commit/bcb689d4cb90835136295d879e710969ebaf29fa))
 * wait for storage to finish before resolving `crawler.run()` ([9d62d56](https://github.com/apify/crawlee/commit/9d62d565c2ff8d058164c22333b07b7d2bf79ee0))
 * using explicitly typed router with `CheerioCrawler` ([07b7e69](https://github.com/apify/crawlee/commit/07b7e69e1a7b7c89b8a5538279eb6de8be0effde))
-* declare dependency on `ow` in `@crawlee/cheerio` package ([be59f99](https://github.com/apify/crawlee/commit/be59f992d2897ce5c02349bbcc62472d99bb2718))
+* declare dependency on `ow` in `@vladfrangu-dev/crawlee-cheerio` package ([be59f99](https://github.com/apify/crawlee/commit/be59f992d2897ce5c02349bbcc62472d99bb2718))
 * use `crawlee@^3.0.0` in the CLI templates ([6426f22](https://github.com/apify/crawlee/commit/6426f22ce53fcce91b1d8686577557bae09fc0e9))
 * fix building projects with TS when puppeteer and playwright are not installed ([1404](https://github.com/apify/crawlee/pull/1404))
 * enqueueLinks should respect full URL of the current request for relative link resolution ([1427](https://github.com/apify/crawlee/pull/1427))
@@ -175,43 +175,43 @@ Up until version 3 of `apify`, the package contained both scraping related tools
 
 Moreover, the Crawlee library is published as several packages under `@crawlee` namespace:
 
-- `@crawlee/core`: the base for all the crawler implementations, also contains things like `Request`, `RequestQueue`, `RequestList` or `Dataset` classes
-- `@crawlee/basic`: exports `BasicCrawler`
-- `@crawlee/cheerio`: exports `CheerioCrawler`
-- `@crawlee/browser`: exports `BrowserCrawler` (which is used for creating `@crawlee/playwright` and `@crawlee/puppeteer`)
-- `@crawlee/playwright`: exports `PlaywrightCrawler`
-- `@crawlee/puppeteer`: exports `PuppeteerCrawler`
-- `@crawlee/memory-storage`: `@apify/storage-local` alternative
-- `@crawlee/browser-pool`: previously `browser-pool` package
-- `@crawlee/utils`: utility methods
-- `@crawlee/types`: holds TS interfaces mainly about the `StorageClient`
+- `@vladfrangu-dev/crawlee-core`: the base for all the crawler implementations, also contains things like `Request`, `RequestQueue`, `RequestList` or `Dataset` classes
+- `@vladfrangu-dev/crawlee-basic`: exports `BasicCrawler`
+- `@vladfrangu-dev/crawlee-cheerio`: exports `CheerioCrawler`
+- `@vladfrangu-dev/crawlee-browser`: exports `BrowserCrawler` (which is used for creating `@vladfrangu-dev/crawlee-playwright` and `@vladfrangu-dev/crawlee-puppeteer`)
+- `@vladfrangu-dev/crawlee-playwright`: exports `PlaywrightCrawler`
+- `@vladfrangu-dev/crawlee-puppeteer`: exports `PuppeteerCrawler`
+- `@vladfrangu-dev/crawlee-memory-storage`: `@apify/storage-local` alternative
+- `@vladfrangu-dev/crawlee-browser-pool`: previously `browser-pool` package
+- `@vladfrangu-dev/crawlee-utils`: utility methods
+- `@vladfrangu-dev/crawlee-types`: holds TS interfaces mainly about the `StorageClient`
 
 #### Installing Crawlee
 
 > As Crawlee is not yet released as `latest`, we need to install from the `next` distribution tag!
 
-Most of the Crawlee packages are extending and reexporting each other, so it's enough to install just the one you plan on using, e.g. `@crawlee/playwright` if you plan on using `playwright` - it already contains everything from the `@crawlee/browser` package, which includes everything from `@crawlee/basic`, which includes everything from `@crawlee/core`.
+Most of the Crawlee packages are extending and reexporting each other, so it's enough to install just the one you plan on using, e.g. `@vladfrangu-dev/crawlee-playwright` if you plan on using `playwright` - it already contains everything from the `@vladfrangu-dev/crawlee-browser` package, which includes everything from `@vladfrangu-dev/crawlee-basic`, which includes everything from `@vladfrangu-dev/crawlee-core`.
 
 ```bash
 npm install crawlee@next
 ```
 
-Or if all we need is cheerio support, we can install only @crawlee/cheerio
+Or if all we need is cheerio support, we can install only @vladfrangu-dev/crawlee-cheerio
 
 ```bash
-npm install @crawlee/cheerio@next
+npm install @vladfrangu-dev/crawlee-cheerio@next
 ```
 
 When using `playwright` or `puppeteer`, we still need to install those dependencies explicitly - this allows the users to be in control of which version will be used.
 
 ```bash
 npm install crawlee@next playwright
-# or npm install @crawlee/playwright@next playwright
+# or npm install @vladfrangu-dev/crawlee-playwright@next playwright
 ```
 
-Alternatively we can also use the `crawlee` meta-package which contains (re-exports) most of the `@crawlee/*` packages, and therefore contains all the crawler classes.
+Alternatively we can also use the `crawlee` meta-package which contains (re-exports) most of the `@vladfrangu-dev/crawlee-*` packages, and therefore contains all the crawler classes.
 
-> Sometimes you might want to use some utility methods from `@crawlee/utils`, so you might want to install that as well. This package contains some utilities that were previously available under `Apify.utils`. Browser related utilities can be also found in the crawler packages (e.g. `@crawlee/playwright`).
+> Sometimes you might want to use some utility methods from `@vladfrangu-dev/crawlee-utils`, so you might want to install that as well. This package contains some utilities that were previously available under `Apify.utils`. Browser related utilities can be also found in the crawler packages (e.g. `@vladfrangu-dev/crawlee-playwright`).
 
 ### Full TypeScript support
 
@@ -290,7 +290,7 @@ Previously, if we wanted to get or add cookies for the session that would be use
 
 ### Memory storage
 
-When we store some data or intermediate state (like the one `RequestQueue` holds), we now use `@crawlee/memory-storage` by default. It is an alternative to the `@apify/storage-local`, that stores the state inside memory (as opposed to SQLite database used by `@apify/storage-local`). While the state is stored in memory, it also dumps it to the file system, so we can observe it, as well as respects the existing data stored in KeyValueStore (e.g. the `INPUT.json` file).
+When we store some data or intermediate state (like the one `RequestQueue` holds), we now use `@vladfrangu-dev/crawlee-memory-storage` by default. It is an alternative to the `@apify/storage-local`, that stores the state inside memory (as opposed to SQLite database used by `@apify/storage-local`). While the state is stored in memory, it also dumps it to the file system, so we can observe it, as well as respects the existing data stored in KeyValueStore (e.g. the `INPUT.json` file).
 
 When we want to run the crawler on Apify platform, we need to use `Actor.init` or `Actor.main`, which will automatically switch the storage client to `ApifyClient` when on the Apify platform.
 

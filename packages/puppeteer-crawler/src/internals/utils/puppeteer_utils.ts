@@ -5,7 +5,7 @@
  * **Example usage:**
  *
  * ```javascript
- * import { launchPuppeteer, utils } from 'crawlee';
+ * import { launchPuppeteer, utils } from '@vladfrangu-dev/crawlee';
  *
  * // Open https://www.example.com in Puppeteer
  * const browser = await launchPuppeteer();
@@ -25,10 +25,10 @@ import { LruCache } from '@apify/datastructures';
 import type { ProtocolMapping } from 'devtools-protocol/types/protocol-mapping.js';
 import type { Page, HTTPResponse, ResponseForRequest, HTTPRequest as PuppeteerRequest } from 'puppeteer';
 import log_ from '@apify/log';
-import type { Request } from '@crawlee/browser';
-import { KeyValueStore, RequestState, validators } from '@crawlee/browser';
-import type { Dictionary, BatchAddRequestsResult } from '@crawlee/types';
-import type { CheerioRoot } from '@crawlee/utils';
+import type { Request } from '@vladfrangu-dev/crawlee-browser';
+import { KeyValueStore, RequestState, validators } from '@vladfrangu-dev/crawlee-browser';
+import type { Dictionary, BatchAddRequestsResult } from '@vladfrangu-dev/crawlee-types';
+import type { CheerioRoot } from '@vladfrangu-dev/crawlee-utils';
 import * as cheerio from 'cheerio';
 import type { EnqueueLinksByClickingElementsOptions } from '../enqueue-links/click-elements';
 import { enqueueLinksByClickingElements } from '../enqueue-links/click-elements';
@@ -209,7 +209,7 @@ export async function parseWithCheerio(page: Page): Promise<CheerioRoot> {
  *
  * **Example usage**
  * ```javascript
- * import { launchPuppeteer, utils } from 'crawlee';
+ * import { launchPuppeteer, utils } from '@vladfrangu-dev/crawlee';
  *
  * const browser = await launchPuppeteer();
  * const page = await browser.newPage();

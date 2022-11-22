@@ -1,6 +1,6 @@
 import { ENV_VARS } from '@apify/consts';
-import { launchPuppeteer } from '@crawlee/puppeteer';
-import { isDocker, getMemoryInfo } from '@crawlee/utils';
+import { launchPuppeteer } from '@vladfrangu-dev/crawlee-puppeteer';
+import { isDocker, getMemoryInfo } from '@vladfrangu-dev/crawlee-utils';
 import { readFile, access } from 'node:fs/promises';
 import { freemem, totalmem } from 'node:os';
 
@@ -13,8 +13,8 @@ jest.mock('node:os', () => {
     };
 });
 
-jest.mock('@crawlee/utils/src/internals/general', () => {
-    const original = jest.requireActual('@crawlee/utils/src/internals/general');
+jest.mock('@vladfrangu-dev/crawlee-utils/src/internals/general', () => {
+    const original = jest.requireActual('@vladfrangu-dev/crawlee-utils/src/internals/general');
     return {
         ...original,
         isDocker: jest.fn(),
@@ -33,7 +33,7 @@ jest.mock('node:fs/promises', () => {
 afterAll(() => {
     jest.unmock('node:os');
     jest.unmock('node:fs/promises');
-    jest.unmock('@crawlee/utils/src/internals/general');
+    jest.unmock('@vladfrangu-dev/crawlee-utils/src/internals/general');
 });
 
 function castToMock<T extends (...args: any[]) => any>(mock: T): jest.MockedFunction<T> {

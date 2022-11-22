@@ -11,7 +11,7 @@ import type {
     RequestHandler,
     ErrorHandler,
     EnqueueLinksOptions,
-} from '@crawlee/basic';
+} from '@vladfrangu-dev/crawlee-basic';
 import {
     cookieStringToToughCookie,
     enqueueLinks,
@@ -23,7 +23,7 @@ import {
     BASIC_CRAWLER_TIMEOUT_BUFFER_SECS,
     BasicCrawler,
     RequestState,
-} from '@crawlee/basic';
+} from '@vladfrangu-dev/crawlee-basic';
 import type {
     BrowserController,
     BrowserPlugin,
@@ -32,10 +32,10 @@ import type {
     CommonPage,
     InferBrowserPluginArray,
     LaunchContext,
-} from '@crawlee/browser-pool';
-import { BROWSER_CONTROLLER_EVENTS, BrowserPool } from '@crawlee/browser-pool';
+} from '@vladfrangu-dev/crawlee-browser-pool';
+import { BROWSER_CONTROLLER_EVENTS, BrowserPool } from '@vladfrangu-dev/crawlee-browser-pool';
 import ow from 'ow';
-import type { Cookie as CookieObject } from '@crawlee/types';
+import type { Cookie as CookieObject } from '@vladfrangu-dev/crawlee-types';
 import type { BrowserLaunchContext } from './browser-launcher';
 
 export interface BrowserCrawlingContext<

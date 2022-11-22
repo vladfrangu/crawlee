@@ -1,6 +1,6 @@
 /* eslint-disable import/no-duplicates */
-import type * as storage from '@crawlee/types';
-import type { Dictionary } from '@crawlee/types';
+import type * as storage from '@vladfrangu-dev/crawlee-types';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import { s } from '@sapphire/shapeshift';
 import { randomUUID } from 'node:crypto';
 import { rm } from 'node:fs/promises';
@@ -111,7 +111,7 @@ export class DatasetClient<Data extends Dictionary = Dictionary> extends BaseCli
     }
 
     async downloadItems(): Promise<Buffer> {
-        throw new Error('This method is not implemented in @crawlee/memory-storage');
+        throw new Error('This method is not implemented in @vladfrangu-dev/crawlee-memory-storage');
     }
 
     async listItems(options: storage.DatasetClientListOptions = {}): Promise<storage.PaginatedList<Data>> {

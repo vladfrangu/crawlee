@@ -6,7 +6,7 @@ import { setTimeout } from 'timers/promises';
 import fs from 'fs';
 import path from 'path';
 import bodyParser from 'body-parser';
-import { entries } from 'crawlee';
+import { entries } from '@vladfrangu-dev/crawlee';
 
 export const startExpressAppPromise = (app: Application, port: number) => {
     return new Promise<Server>((resolve) => {
@@ -37,7 +37,7 @@ export const responseSamples = {
             margin: 0;
             padding: 0;
             font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            
+
         }
         div {
             width: 600px;
@@ -57,9 +57,9 @@ export const responseSamples = {
                 width: auto;
             }
         }
-        </style>    
+        </style>
     </head>
-    
+
     <body>
     <div>
         <h1>Example Domain</h1>
@@ -79,7 +79,7 @@ export const responseSamples = {
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="cacheable/style.css">
-        <script src="cacheable/script.js"></script> 
+        <script src="cacheable/script.js"></script>
     </body>
     </html>
 `,

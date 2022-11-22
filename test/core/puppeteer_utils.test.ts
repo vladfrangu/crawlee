@@ -1,8 +1,8 @@
 import path from 'path';
 import express from 'express';
 import log from '@apify/log';
-import { KeyValueStore, launchPuppeteer, puppeteerUtils, Request } from '@crawlee/puppeteer';
-import type { Dictionary } from '@crawlee/utils';
+import { KeyValueStore, launchPuppeteer, puppeteerUtils, Request } from '@vladfrangu-dev/crawlee-puppeteer';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-utils';
 import type { Browser, Page, ResponseForRequest } from 'puppeteer';
 import type { Server } from 'http';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';

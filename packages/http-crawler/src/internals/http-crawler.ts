@@ -9,7 +9,7 @@ import type {
     ProxyConfiguration,
     Request,
     Session,
-} from '@crawlee/basic';
+} from '@vladfrangu-dev/crawlee-basic';
 import {
     BasicCrawler,
     BASIC_CRAWLER_TIMEOUT_BUFFER_SECS,
@@ -19,8 +19,8 @@ import {
     validators,
     Configuration,
     RequestState,
-} from '@crawlee/basic';
-import type { Awaitable, Dictionary } from '@crawlee/types';
+} from '@vladfrangu-dev/crawlee-basic';
+import type { Awaitable, Dictionary } from '@vladfrangu-dev/crawlee-types';
 import type { RequestLike, ResponseLike } from 'content-type';
 import contentTypeParser from 'content-type';
 import mime from 'mime-types';
@@ -246,7 +246,7 @@ export type HttpRequestHandler<
  * **Example usage:**
  *
  * ```javascript
- * import { HttpCrawler, Dataset } from '@crawlee/http';
+ * import { HttpCrawler, Dataset } from '@vladfrangu-dev/crawlee-http';
  *
  * const crawler = new HttpCrawler({
  *     requestList,
@@ -854,7 +854,7 @@ function parseContentTypeFromResponse(response: IncomingMessage): { type: string
  * > Serves as a shortcut for using `Router.create<HttpCrawlingContext>()`.
  *
  * ```ts
- * import { HttpCrawler, createHttpRouter } from 'crawlee';
+ * import { HttpCrawler, createHttpRouter } from '@vladfrangu-dev/crawlee';
  *
  * const router = createHttpRouter();
  * router.addHandler('label-a', async (ctx) => {

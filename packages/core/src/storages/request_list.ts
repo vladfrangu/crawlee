@@ -1,5 +1,5 @@
-import { downloadListOfUrls } from '@crawlee/utils';
-import type { Dictionary } from '@crawlee/types';
+import { downloadListOfUrls } from '@vladfrangu-dev/crawlee-utils';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import ow, { ArgumentError } from 'ow';
 import type { EventManager } from '../events';
 import { EventType } from '../events';

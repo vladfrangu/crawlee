@@ -1,7 +1,7 @@
 import log from '@apify/log';
 import { cryptoRandomObjectId } from '@apify/utilities';
-import { MemoryStorage } from '@crawlee/memory-storage';
-import { Configuration } from 'crawlee';
+import { MemoryStorage } from '@vladfrangu-dev/crawlee-memory-storage';
+import { Configuration } from '@vladfrangu-dev/crawlee';
 import { ensureDir } from 'fs-extra';
 import { resolve } from 'node:path';
 import { StorageEmulator } from './StorageEmulator';
@@ -21,7 +21,7 @@ export class MemoryStorageEmulator extends StorageEmulator {
     }
 
     static override toString() {
-        return '@crawlee/memory-storage';
+        return '@vladfrangu-dev/crawlee-memory-storage';
     }
 }
 

@@ -1,4 +1,4 @@
-import { Dataset, createCheerioRouter } from 'crawlee';
+import { Dataset, createCheerioRouter } from '@vladfrangu-dev/crawlee';
 
 export const router = createCheerioRouter();
 

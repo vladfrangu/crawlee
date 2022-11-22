@@ -1,5 +1,5 @@
 {
-    "name": "@crawlee/cheerio",
+    "name": "@vladfrangu-dev/crawlee-cheerio",
     "version": "3.1.2",
     "description": "The scalable web crawling and scraping library for JavaScript/Node.js. Enables development of data extraction and web automation jobs (not only) with headless Chrome and Puppeteer.",
     "engines": {
@@ -53,8 +53,8 @@
         "access": "public"
     },
     "dependencies": {
-        "@crawlee/http": "^3.1.2",
-        "@crawlee/types": "^3.1.2",
+        "@vladfrangu-dev/crawlee-http": "^3.1.2",
+        "@vladfrangu-dev/crawlee-types": "^3.1.2",
         "cheerio": "1.0.0-rc.12",
         "htmlparser2": "^8.0.1"
     }

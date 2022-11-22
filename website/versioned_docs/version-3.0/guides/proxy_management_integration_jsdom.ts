@@ -1,4 +1,4 @@
-import { JSDOMCrawler, ProxyConfiguration } from 'crawlee';
+import { JSDOMCrawler, ProxyConfiguration } from '@vladfrangu-dev/crawlee';
 
 const proxyConfiguration = new ProxyConfiguration({
     proxyUrls: [

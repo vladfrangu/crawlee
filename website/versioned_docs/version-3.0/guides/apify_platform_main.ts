@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { CheerioCrawler } from 'crawlee';
+import { CheerioCrawler } from '@vladfrangu-dev/crawlee';
 
 await Actor.main(async () => {
     const crawler = new CheerioCrawler({

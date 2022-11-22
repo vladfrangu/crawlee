@@ -1,6 +1,6 @@
 import { MAX_PAYLOAD_SIZE_BYTES } from '@apify/consts';
-import { Dataset, checkAndSerialize, chunkBySize, Configuration, KeyValueStore } from '@crawlee/core';
-import type { Dictionary } from '@crawlee/utils';
+import { Dataset, checkAndSerialize, chunkBySize, Configuration, KeyValueStore } from '@vladfrangu-dev/crawlee-core';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-utils';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';
 
 const localStorageEmulator = new MemoryStorageEmulator();

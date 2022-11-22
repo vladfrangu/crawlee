@@ -1,5 +1,5 @@
 {
-    "name": "@crawlee/jsdom",
+    "name": "@vladfrangu-dev/crawlee-jsdom",
     "version": "3.1.2",
     "description": "The scalable web crawling and scraping library for JavaScript/Node.js. Enables development of data extraction and web automation jobs (not only) with headless Chrome and Puppeteer.",
     "engines": {
@@ -54,8 +54,8 @@
     },
     "dependencies": {
         "@apify/utilities": "^2.1.4",
-        "@crawlee/http": "^3.1.2",
-        "@crawlee/types": "^3.1.2",
+        "@vladfrangu-dev/crawlee-http": "^3.1.2",
+        "@vladfrangu-dev/crawlee-types": "^3.1.2",
         "@types/jsdom": "^20.0.0",
         "jsdom": "^20.0.0",
         "ow": "^0.28.2"

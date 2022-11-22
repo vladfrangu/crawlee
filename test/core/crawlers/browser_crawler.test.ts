@@ -1,5 +1,5 @@
 import { ENV_VARS } from '@apify/consts';
-import { BROWSER_POOL_EVENTS, BrowserPool, OperatingSystemsName, PuppeteerPlugin } from '@crawlee/browser-pool';
+import { BROWSER_POOL_EVENTS, BrowserPool, OperatingSystemsName, PuppeteerPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
 import type { HTTPResponse } from 'puppeteer';
 import puppeteer from 'puppeteer';
 import log from '@apify/log';
@@ -7,7 +7,7 @@ import type {
     PuppeteerCrawlingContext,
     PuppeteerGoToOptions,
     PuppeteerRequestHandler,
-} from '@crawlee/puppeteer';
+} from '@vladfrangu-dev/crawlee-puppeteer';
 import {
     AutoscaledPool,
     ProxyConfiguration,
@@ -15,9 +15,9 @@ import {
     RequestList,
     RequestState,
     Session,
-} from '@crawlee/puppeteer';
+} from '@vladfrangu-dev/crawlee-puppeteer';
 import { gotScraping } from 'got-scraping';
-import { sleep } from '@crawlee/utils';
+import { sleep } from '@vladfrangu-dev/crawlee-utils';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';
 import { runExampleComServer } from 'test/shared/_helper';
 import type { Server } from 'http';

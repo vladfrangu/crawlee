@@ -16,29 +16,29 @@ const packages = [
     'types',
 ];
 const packagesOrder = [
-    '@crawlee/core',
-    '@crawlee/cheerio',
-    '@crawlee/jsdom',
-    '@crawlee/playwright',
-    '@crawlee/puppeteer',
-    '@crawlee/basic',
-    '@crawlee/http',
-    '@crawlee/browser',
-    '@crawlee/memory-storage',
-    '@crawlee/browser-pool',
-    '@crawlee/utils',
-    '@crawlee/types',
+    '@vladfrangu-dev/crawlee-core',
+    '@vladfrangu-dev/crawlee-cheerio',
+    '@vladfrangu-dev/crawlee-jsdom',
+    '@vladfrangu-dev/crawlee-playwright',
+    '@vladfrangu-dev/crawlee-puppeteer',
+    '@vladfrangu-dev/crawlee-basic',
+    '@vladfrangu-dev/crawlee-http',
+    '@vladfrangu-dev/crawlee-browser',
+    '@vladfrangu-dev/crawlee-memory-storage',
+    '@vladfrangu-dev/crawlee-browser-pool',
+    '@vladfrangu-dev/crawlee-utils',
+    '@vladfrangu-dev/crawlee-types',
 ];
 
 /** @type {Partial<import('@docusaurus/types').DocusaurusConfig>} */
 module.exports = {
-    title: 'Crawlee',
+    title: '@vladfrangu-dev/crawlee',
     tagline: 'Build reliable crawlers. Fast.',
     url: 'https://crawlee.dev',
     baseUrl: '/',
     trailingSlash: false,
     organizationName: 'apify',
-    projectName: 'crawlee',
+    projectName: '@vladfrangu-dev/crawlee',
     scripts: ['/js/custom.js'],
     favicon: 'img/favicon.ico',
     customFields: {
@@ -133,7 +133,7 @@ module.exports = {
         },
         navbar: {
             hideOnScroll: true,
-            title: 'Crawlee',
+            title: '@vladfrangu-dev/crawlee',
             logo: {
                 src: 'img/crawlee-light.svg',
                 srcDark: 'img/crawlee-dark.svg',
@@ -277,7 +277,7 @@ module.exports = {
         algolia: {
             appId: '5JC94MPMLY',
             apiKey: '267679200b833c2ca1255ab276731869', // search only (public) API key
-            indexName: 'crawlee',
+            indexName: '@vladfrangu-dev/crawlee',
             algoliaOptions: {
                 facetFilters: ['version:VERSION'],
             },

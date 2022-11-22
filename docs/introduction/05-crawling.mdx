@@ -1,7 +1,7 @@
 ---
 id: crawling
-title: "Crawling the Store"
-sidebar_label: "Crawling"
+title: 'Crawling the Store'
+sidebar_label: 'Crawling'
 description: Your first steps into the world of scraping with Crawlee
 ---
 
@@ -18,11 +18,11 @@ await enqueueLinks();
 While useful in that scenario, you need something different now. Instead of finding all the `<a href="..">` elements with links to the same hostname, you need to find only the specific ones that will take your crawler to the next page of results. Otherwise, the crawler will visit a lot of other pages that you're not interested in. Using the power of DevTools and yet another `enqueueLinks()` parameter, this becomes fairly easy.
 
 ```ts
-import { PlaywrightCrawler } from 'crawlee';
+import { PlaywrightCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PlaywrightCrawler({
     requestHandler: async ({ page, request, enqueueLinks }) => {
-        console.log(`Processing: ${request.url}`)
+        console.log(`Processing: ${request.url}`);
         // Wait for the actor cards to render,
         // otherwise enqueueLinks wouldn't enqueue anything.
         await page.waitForSelector('.ActorStorePagination-pages a');
@@ -32,7 +32,7 @@ const crawler = new PlaywrightCrawler({
         await enqueueLinks({
             selector: '.ActorStorePagination-pages > a',
             label: 'LIST',
-        })
+        });
     },
 });
 
@@ -54,11 +54,11 @@ You will see `label` used often throughout Crawlee, as it's a convenient way of 
 In a similar fashion, you need to collect all the URLs to the actor detail pages, because only from there you can scrape all the data you need. The following code only repeats the concepts you already know for another set of links.
 
 ```ts
-import { PlaywrightCrawler } from 'crawlee';
+import { PlaywrightCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PlaywrightCrawler({
     requestHandler: async ({ page, request, enqueueLinks }) => {
-        console.log(`Processing: ${request.url}`)
+        console.log(`Processing: ${request.url}`);
         if (request.label === 'DETAIL') {
             // We're not doing anything with the details yet.
         } else {
@@ -69,7 +69,7 @@ const crawler = new PlaywrightCrawler({
             await enqueueLinks({
                 selector: '.ActorStorePagination-pages > a',
                 label: 'LIST',
-            })
+            });
 
             // In addition to adding the listing URLs, we now also
             // add the detail URLs from all the listing pages.
@@ -77,7 +77,7 @@ const crawler = new PlaywrightCrawler({
             await enqueueLinks({
                 selector: '.ActorStoreItem',
                 label: 'DETAIL', // <= note the different label
-            })
+            });
         }
     },
 });

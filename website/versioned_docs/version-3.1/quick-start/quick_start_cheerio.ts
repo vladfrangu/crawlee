@@ -1,4 +1,4 @@
-import { CheerioCrawler, Dataset } from 'crawlee';
+import { CheerioCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 // CheerioCrawler crawls the web using HTTP requests
 // and parses HTML using the Cheerio library.

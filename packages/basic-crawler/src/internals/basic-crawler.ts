@@ -16,7 +16,7 @@ import type {
     RouterHandler,
     Session,
     SessionPoolOptions,
-} from '@crawlee/core';
+} from '@vladfrangu-dev/crawlee-core';
 import {
     mergeCookies,
     AutoscaledPool,
@@ -36,11 +36,11 @@ import {
     purgeDefaultStorages,
     validators,
     RetryRequestError,
-} from '@crawlee/core';
+} from '@vladfrangu-dev/crawlee-core';
 import type { Method, OptionsInit } from 'got-scraping';
 import { gotScraping } from 'got-scraping';
-import type { ProcessedRequest, Dictionary, Awaitable, BatchAddRequestsResult } from '@crawlee/types';
-import { chunk, sleep } from '@crawlee/utils';
+import type { ProcessedRequest, Dictionary, Awaitable, BatchAddRequestsResult } from '@vladfrangu-dev/crawlee-types';
+import { chunk, sleep } from '@vladfrangu-dev/crawlee-utils';
 import ow, { ArgumentError } from 'ow';
 
 export interface BasicCrawlingContext<
@@ -293,7 +293,7 @@ export interface BasicCrawlerOptions<Context extends CrawlingContext = BasicCraw
  * **Example usage:**
  *
  * ```javascript
- * import { BasicCrawler, Dataset } from 'crawlee';
+ * import { BasicCrawler, Dataset } from '@vladfrangu-dev/crawlee';
  *
  * // Create a crawler instance
  * const crawler = new BasicCrawler({
@@ -1271,7 +1271,7 @@ interface HandlePropertyNameChangeData<New, Old> {
  * > Serves as a shortcut for using `Router.create<BasicCrawlingContext>()`.
  *
  * ```ts
- * import { BasicCrawler, createBasicRouter } from 'crawlee';
+ * import { BasicCrawler, createBasicRouter } from '@vladfrangu-dev/crawlee';
  *
  * const router = createBasicRouter();
  * router.addHandler('label-a', async (ctx) => {

@@ -1,4 +1,4 @@
-import { BasicCrawler, Dataset } from 'crawlee';
+import { BasicCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 // Create a BasicCrawler - the simplest crawler that enables
 // users to implement the crawling logic themselves.

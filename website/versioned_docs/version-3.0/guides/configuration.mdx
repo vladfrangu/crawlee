@@ -33,7 +33,7 @@ The first option you could use for configuring Crawlee is `crawlee.json` file. T
 With `crawlee.json` you don't need to do anything else in the code:
 
 ```js
-import { CheerioCrawler, sleep } from 'crawlee';
+import { CheerioCrawler, sleep } from '@vladfrangu-dev/crawlee';
 // We are not importing nor passing
 // the Configuration to the crawler.
 // We are not assigning any env vars either.
@@ -130,7 +130,7 @@ The last option to adjust Crawlee configuration is to use the <ApiLink to="core/
 By default, there is a global singleton instance of `Configuration` class, it is used by the crawlers and some other classes that depend on a configurable behavior. In most cases you don't need to adjust any options there, but if needed - you can get access to it via <ApiLink to="core/class/Configuration#getGlobalConfig">`Configuration.getGlobalConfig()`</ApiLink> function. Now you can easily <ApiLink to="core/class/Configuration#get">`get`</ApiLink> and <ApiLink to="core/class/Configuration#set">`set`</ApiLink> the <ApiLink to="core/interface/ConfigurationOptions">`ConfigurationOptions`</ApiLink>.
 
 ```js
-import { CheerioCrawler, Configuration, sleep } from 'crawlee';
+import { CheerioCrawler, Configuration, sleep } from '@vladfrangu-dev/crawlee';
 
 // Get the global configuration
 const config = Configuration.getGlobalConfig();
@@ -180,7 +180,7 @@ and the crawler was forcefully aborted after ~15 seconds of run time before it p
 Alternatively, you can create a custom configuration. In this case you need to pass it to the class that is going to use it, e.g. to the crawler. Let's adjust the previous example:
 
 ```js
-import { CheerioCrawler, Configuration, sleep } from 'crawlee';
+import { CheerioCrawler, Configuration, sleep } from '@vladfrangu-dev/crawlee';
 
 // Create new configuration
 const config = new Configuration({

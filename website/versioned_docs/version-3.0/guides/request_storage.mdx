@@ -78,7 +78,7 @@ In Crawlee, the request list is represented by the <ApiLink to="core/class/Reque
 The following code demonstrates basic operations of the request list:
 
 ```javascript
-import { RequestList, PuppeteerCrawler } from 'crawlee';
+import { RequestList, PuppeteerCrawler } from '@vladfrangu-dev/crawlee';
 
 // Prepare the sources array with URLs to visit
 const sources = [
@@ -138,7 +138,7 @@ However, now we could use the <ApiLink to="core/class/RequestQueue#addRequests">
 Default storages are purged before the crawler starts if not specified otherwise. This happens as early as when we try to open some storage (e.g. via `RequestQueue.open()`) or when we try to work with a default storage via one of the helper methods (e.g. `crawler.addRequests()` that under the hood calls `RequestQueue.open()`). If we don't work with storages explicitly in our code, the purging will eventually happen when the `run` method of our crawler is executed. In case we need to purge the storages sooner, we can use the <ApiLink to="core/function/purgeDefaultStorages">`purgeDefaultStorages()`</ApiLink> helper explicitly:
 
 ```javascript
-import { purgeDefaultStorages } from 'crawlee';
+import { purgeDefaultStorages } from '@vladfrangu-dev/crawlee';
 
 await purgeDefaultStorages();
 ```

@@ -1,9 +1,9 @@
 /* eslint-disable no-underscore-dangle */
 
 import log from '@apify/log';
-import { Configuration, EventType, LocalEventManager, Snapshotter } from '@crawlee/core';
-import type { MemoryInfo } from '@crawlee/utils';
-import { sleep } from '@crawlee/utils';
+import { Configuration, EventType, LocalEventManager, Snapshotter } from '@vladfrangu-dev/crawlee-core';
+import type { MemoryInfo } from '@vladfrangu-dev/crawlee-utils';
+import { sleep } from '@vladfrangu-dev/crawlee-utils';
 import os from 'os';
 
 const toBytes = (x: number) => x * 1024 * 1024;

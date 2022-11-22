@@ -1,9 +1,9 @@
 import type { Log } from '@apify/log';
 import type { BetterIntervalID } from '@apify/utilities';
 import { betterClearInterval, betterSetInterval } from '@apify/utilities';
-import { getMemoryInfo } from '@crawlee/utils';
+import { getMemoryInfo } from '@vladfrangu-dev/crawlee-utils';
 import ow from 'ow';
-import type { StorageClient } from '@crawlee/types';
+import type { StorageClient } from '@vladfrangu-dev/crawlee-types';
 import { Configuration } from '../configuration';
 import { log as defaultLog } from '../log';
 import type { SystemInfo } from './system_status';

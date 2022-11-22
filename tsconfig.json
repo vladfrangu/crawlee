@@ -3,15 +3,15 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "crawlee": ["packages/crawlee/src"],
-            "@crawlee/basic": ["packages/basic-crawler/src"],
-            "@crawlee/browser": ["packages/browser-crawler/src"],
-            "@crawlee/http": ["packages/http-crawler/src"],
-            "@crawlee/jsdom": ["packages/jsdom-crawler/src"],
-            "@crawlee/cheerio": ["packages/cheerio-crawler/src"],
-            "@crawlee/playwright": ["packages/playwright-crawler/src"],
-            "@crawlee/puppeteer": ["packages/puppeteer-crawler/src"],
-            "@crawlee/*": ["packages/*/src"],
+            "@vladfrangu-dev/crawlee": ["packages/crawlee/src"],
+            "@vladfrangu-dev/crawlee-basic": ["packages/basic-crawler/src"],
+            "@vladfrangu-dev/crawlee-browser": ["packages/browser-crawler/src"],
+            "@vladfrangu-dev/crawlee-http": ["packages/http-crawler/src"],
+            "@vladfrangu-dev/crawlee-jsdom": ["packages/jsdom-crawler/src"],
+            "@vladfrangu-dev/crawlee-cheerio": ["packages/cheerio-crawler/src"],
+            "@vladfrangu-dev/crawlee-playwright": ["packages/playwright-crawler/src"],
+            "@vladfrangu-dev/crawlee-puppeteer": ["packages/puppeteer-crawler/src"],
+            "@vladfrangu-dev/crawlee-*": ["packages/*/src"],
         }
     }
 }

@@ -1,4 +1,4 @@
-import { RequestQueue } from 'crawlee';
+import { RequestQueue } from '@vladfrangu-dev/crawlee';
 
 // Open the default request queue associated with the crawler run
 const requestQueue = await RequestQueue.open();

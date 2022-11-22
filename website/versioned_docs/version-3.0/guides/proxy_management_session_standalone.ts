@@ -1,4 +1,4 @@
-import { ProxyConfiguration, SessionPool } from 'crawlee';
+import { ProxyConfiguration, SessionPool } from '@vladfrangu-dev/crawlee';
 
 const proxyConfiguration = new ProxyConfiguration({ /* opts */ });
 

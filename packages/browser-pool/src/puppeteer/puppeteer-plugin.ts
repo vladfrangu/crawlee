@@ -1,4 +1,4 @@
-import type { Dictionary } from '@crawlee/types';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import type Puppeteer from './puppeteer-proxy-per-page';
 import type { Browser, Target, BrowserContext } from './puppeteer-proxy-per-page';
 import type { BrowserController } from '../abstract-classes/browser-controller';

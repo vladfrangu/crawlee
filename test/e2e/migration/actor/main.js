@@ -2,7 +2,7 @@ import { Worker, workerData } from 'worker_threads';
 import { URL } from 'url';
 import { once } from 'events';
 import { Actor } from 'apify';
-import { CheerioCrawler, Configuration, Dataset } from '@crawlee/cheerio';
+import { CheerioCrawler, Configuration, Dataset } from '@vladfrangu-dev/crawlee-cheerio';
 import { ApifyStorageLocal } from '@apify/storage-local';
 
 process.env.CRAWLEE_PURGE_ON_START = '0';

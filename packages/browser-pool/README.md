@@ -31,13 +31,13 @@ in multiple browsers at the same time or launching web automation robots.
 <!-- tocstop -->
 
 ## Installation
-Use NPM or Yarn to install `@crawlee/browser-pool`. Note that `@crawlee/browser-pool` does not come preinstalled
+Use NPM or Yarn to install `@vladfrangu-dev/crawlee-browser-pool`. Note that `@vladfrangu-dev/crawlee-browser-pool` does not come preinstalled
 with browser automation libraries. This allows you to choose your own libraries and their
-versions, and it also makes `@crawlee/browser-pool` much smaller.
+versions, and it also makes `@vladfrangu-dev/crawlee-browser-pool` much smaller.
 
-Run this command to install `@crawlee/browser-pool` and the `playwright` browser automation library.
+Run this command to install `@vladfrangu-dev/crawlee-browser-pool` and the `playwright` browser automation library.
 ```bash
-npm install @crawlee/browser-pool playwright
+npm install @vladfrangu-dev/crawlee-browser-pool playwright
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ your own. By calling `browserPool.newPage()` you launch a new Firefox browser
 and open a new page in that browser.
 
 ```js
-import { BrowserPool, PlaywrightPlugin } from '@crawlee/browser-pool';
+import { BrowserPool, PlaywrightPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
 import playwright from 'playwright';
 
 const browserPool = new BrowserPool({
@@ -81,7 +81,7 @@ in the background. You only need to provide the relevant plugins and call
 `browserPool.newPage()`.
 
 ```js
-import { BrowserPool, PlaywrightPlugin } from '@crawlee/browser-pool';
+import { BrowserPool, PlaywrightPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
 import playwright from 'playwright';
 
 const browserPool = new BrowserPool({
@@ -109,7 +109,7 @@ if you need to consistently run tasks in multiple environments.
 For that, there's the `newPageWithEachPlugin` function.
 
 ```js
-import { BrowserPool, PlaywrightPlugin, PuppeteerPlugin } from '@crawlee/browser-pool';
+import { BrowserPool, PlaywrightPlugin, PuppeteerPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
 import playwright from 'playwright';
 import puppeteer from 'puppeteer';
 
@@ -363,13 +363,13 @@ All public classes, methods and their parameters can be inspected in this API re
 
 <a name="module_browser-pool"></a>
 
-### @crawlee/browser-pool
-The `@crawlee/browser-pool` module exports three constructors. One for `BrowserPool`
+### @vladfrangu-dev/crawlee-browser-pool
+The `@vladfrangu-dev/crawlee-browser-pool` module exports three constructors. One for `BrowserPool`
 itself and two for the included Puppeteer and Playwright plugins.
 
 **Example:**
 ```js
-import { BrowserPool, PuppeteerPlugin, PlaywrightPlugin } from '@crawlee/browser-pool';
+import { BrowserPool, PuppeteerPlugin, PlaywrightPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
 import puppeteer from 'puppeteer';
 import playwright from 'playwright';
 
@@ -395,7 +395,7 @@ const browserPool = new BrowserPool({
 <a name="BrowserPool"></a>
 
 ### BrowserPool
-The `BrowserPool` class is the most important class of the `@crawlee/browser-pool` module.
+The `BrowserPool` class is the most important class of the `@vladfrangu-dev/crawlee-browser-pool` module.
 It manages opening and closing of browsers and their pages and its constructor
 options allow easy configuration of the browsers' and pages' lifecycle.
 
@@ -405,7 +405,7 @@ stage of the browser / page lifecycle.
 
 **Example:**
 ```js
-import { BrowserPool, PlaywrightPlugin } from '@crawlee/browser-pool';
+import { BrowserPool, PlaywrightPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
 import playwright from 'playwright';
 
 const browserPool = new BrowserPool({
@@ -466,7 +466,7 @@ const browserPool = new BrowserPool({
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | options | <code>object</code> |  |  |
-| options.browserPlugins | [<code>Array.&lt;BrowserPlugin&gt;</code>](#BrowserPlugin) |  | Browser plugins are wrappers of browser automation libraries that  allow `BrowserPool` to control browsers with those libraries.  `@crawlee/browser-pool` comes with a `PuppeteerPlugin` and a `PlaywrightPlugin`. |
+| options.browserPlugins | [<code>Array.&lt;BrowserPlugin&gt;</code>](#BrowserPlugin) |  | Browser plugins are wrappers of browser automation libraries that  allow `BrowserPool` to control browsers with those libraries.  `@vladfrangu-dev/crawlee-browser-pool` comes with a `PuppeteerPlugin` and a `PlaywrightPlugin`. |
 | [options.maxOpenPagesPerBrowser] | <code>number</code> | <code>20</code> | Sets the maximum number of pages that can be open in a browser at the  same time. Once reached, a new browser will be launched to handle the excess. |
 | [options.retireBrowserAfterPageCount] | <code>number</code> | <code>100</code> | Browsers tend to get bloated after processing a lot of pages. This option  configures the number of processed pages after which the browser will  automatically retire and close. A new browser will launch in its place. |
 | [options.operationTimeoutSecs] | <code>number</code> | <code>15</code> | As we know from experience, async operations of the underlying libraries,  such as launching a browser or opening a new page, can get stuck.  To prevent `BrowserPool` from getting stuck, we add a timeout  to those operations and you can configure it with this option. |
@@ -754,7 +754,7 @@ feed them to [BrowserPool](#BrowserPool) for use.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| library | <code>object</code> | Each plugin expects an instance of the object with the `.launch()` property.  For Puppeteer, it is the `puppeteer` module itself, whereas for Playwright  it is one of the browser types, such as `puppeteer.chromium`.  `BrowserPlugin` does not include the library. You can choose any version  or fork of the library. It also keeps `@crawlee/browser-pool` installation small. |
+| library | <code>object</code> | Each plugin expects an instance of the object with the `.launch()` property.  For Puppeteer, it is the `puppeteer` module itself, whereas for Playwright  it is one of the browser types, such as `puppeteer.chromium`.  `BrowserPlugin` does not include the library. You can choose any version  or fork of the library. It also keeps `@vladfrangu-dev/crawlee-browser-pool` installation small. |
 | [options] | <code>object</code> |  |
 | [options.launchOptions] | <code>object</code> | Options that will be passed down to the automation library. E.g.  `puppeteer.launch(launchOptions);`. This is a good place to set  options that you want to apply as defaults. To dynamically override  those options per-browser, see the `preLaunchHooks` of [BrowserPool](#BrowserPool). |
 | [options.proxyUrl] | <code>string</code> | Automation libraries configure proxies differently. This helper allows you  to set a proxy URL without worrying about specific implementations.  It also allows you use an authenticated proxy without extra code. |

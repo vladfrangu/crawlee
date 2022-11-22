@@ -5,7 +5,7 @@
  * **Example usage:**
  *
  * ```javascript
- * import { launchPlaywright, playwrightUtils } from 'crawlee';
+ * import { launchPlaywright, playwrightUtils } from '@vladfrangu-dev/crawlee';
  *
  * // Navigate to https://www.example.com in Playwright with a POST request
  * const browser = await launchPlaywright();
@@ -24,11 +24,11 @@ import vm from 'vm';
 import type { Page, Response, Route } from 'playwright';
 import { LruCache } from '@apify/datastructures';
 import log_ from '@apify/log';
-import type { Request } from '@crawlee/browser';
-import { validators, KeyValueStore, RequestState } from '@crawlee/browser';
-import type { CheerioRoot, Dictionary } from '@crawlee/utils';
+import type { Request } from '@vladfrangu-dev/crawlee-browser';
+import { validators, KeyValueStore, RequestState } from '@vladfrangu-dev/crawlee-browser';
+import type { CheerioRoot, Dictionary } from '@vladfrangu-dev/crawlee-utils';
 import * as cheerio from 'cheerio';
-import type { BatchAddRequestsResult } from '@crawlee/types';
+import type { BatchAddRequestsResult } from '@vladfrangu-dev/crawlee-types';
 import type { PlaywrightCrawlingContext } from '../playwright-crawler';
 import type { EnqueueLinksByClickingElementsOptions } from '../enqueue-links/click-elements';
 import { enqueueLinksByClickingElements } from '../enqueue-links/click-elements';
@@ -244,7 +244,7 @@ export async function gotoExtended(page: Page, request: Request, gotoOptions: Di
  *
  * **Example usage**
  * ```javascript
- * import { launchPlaywright, playwrightUtils } from 'crawlee';
+ * import { launchPlaywright, playwrightUtils } from '@vladfrangu-dev/crawlee';
  *
  * const browser = await launchPlaywright();
  * const page = await browser.newPage();

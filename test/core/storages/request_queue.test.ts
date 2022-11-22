@@ -5,8 +5,8 @@ import {
     RequestQueue,
     Request,
     Configuration,
-} from '@crawlee/core';
-import { sleep } from '@crawlee/utils';
+} from '@vladfrangu-dev/crawlee-core';
+import { sleep } from '@vladfrangu-dev/crawlee-utils';
 
 describe('RequestQueue remote', () => {
     const storageClient = Configuration.getStorageClient();

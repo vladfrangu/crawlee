@@ -1,5 +1,5 @@
 // For more information, see https://crawlee.dev/
-import { CheerioCrawler, ProxyConfiguration } from 'crawlee';
+import { CheerioCrawler, ProxyConfiguration } from '@vladfrangu-dev/crawlee';
 import { router } from './routes.js';
 
 const startUrls = ['https://crawlee.dev'];

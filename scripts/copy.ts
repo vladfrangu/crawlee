@@ -48,7 +48,7 @@ function getNextVersion() {
     const versions: string[] = [];
 
     try {
-        const versionString = execSync(`npm show @crawlee/core versions --json`, { encoding: 'utf8', stdio: 'pipe' });
+        const versionString = execSync(`npm show @vladfrangu-dev/crawlee-core versions --json`, { encoding: 'utf8', stdio: 'pipe' });
         const parsed = JSON.parse(versionString) as string[];
         versions.push(...parsed);
     } catch {
@@ -85,7 +85,7 @@ if (options.canary) {
     pkgJson.version = nextVersion;
 
     for (const dep of Object.keys(pkgJson.dependencies)) {
-        if (dep.startsWith('@crawlee/') || dep === 'crawlee') {
+        if (dep.startsWith('@vladfrangu-dev/crawlee-') || dep === '@vladfrangu-dev/crawlee') {
             const prefix = pkgJson.dependencies[dep].startsWith('^') ? '^' : '';
             pkgJson.dependencies[dep] = prefix + nextVersion;
         }

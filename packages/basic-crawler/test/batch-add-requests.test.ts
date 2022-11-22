@@ -1,4 +1,4 @@
-import { BasicCrawler } from '@crawlee/basic';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee-basic';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';
 
 describe('BasicCrawler#addRequests with big batch sizes', () => {

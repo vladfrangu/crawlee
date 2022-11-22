@@ -1,6 +1,6 @@
 ---
 id: saving-data
-title: "Saving data"
+title: 'Saving data'
 description: Your first steps into the world of scraping with Crawlee
 ---
 
@@ -11,7 +11,7 @@ A data extraction job would not be complete without saving the data for later us
 First, add a new import to the top of the file:
 
 ```ts
-import { PlaywrightCrawler, Dataset } from 'crawlee';
+import { PlaywrightCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 ```
 
 Then, replace the `console.log(results)` call with:
@@ -23,26 +23,35 @@ await Dataset.pushData(results);
 and that's it. Unlike earlier, we are being serious now. That's it, we're done. The final code looks like this:
 
 ```js
-import { PlaywrightCrawler, Dataset } from 'crawlee';
+import { PlaywrightCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PlaywrightCrawler({
     requestHandler: async ({ page, request, enqueueLinks }) => {
-        console.log(`Processing: ${request.url}`)
+        console.log(`Processing: ${request.url}`);
         if (request.label === 'DETAIL') {
             const urlParts = request.url.split('/').slice(-2);
-            const modifiedTimestamp = await page.locator('time[datetime]').getAttribute('datetime');
-            const runsRow = page.locator('ul.ActorHeader-stats > li').filter({ hasText: 'Runs' });
-            const runCountString = await runsRow.locator('span').last().textContent();
+            const modifiedTimestamp = await page
+                .locator('time[datetime]')
+                .getAttribute('datetime');
+            const runsRow = page
+                .locator('ul.ActorHeader-stats > li')
+                .filter({ hasText: 'Runs' });
+            const runCountString = await runsRow
+                .locator('span')
+                .last()
+                .textContent();
 
             const results = {
                 url: request.url,
                 uniqueIdentifier: urlParts.join('/'),
                 owner: urlParts[0],
                 title: await page.locator('h1').textContent(),
-                description: await page.locator('span.actor-description').textContent(),
+                description: await page
+                    .locator('span.actor-description')
+                    .textContent(),
                 modifiedDate: new Date(Number(modifiedTimestamp)),
                 runCount: Number(runCountString.replaceAll(',', '')),
-            }
+            };
 
             await Dataset.pushData(results);
         } else {
@@ -50,14 +59,14 @@ const crawler = new PlaywrightCrawler({
             await enqueueLinks({
                 selector: '.ActorStorePagination-pages > a',
                 label: 'LIST',
-            })
+            });
             await page.waitForSelector('.ActorStoreItem');
             await enqueueLinks({
                 selector: '.ActorStoreItem',
                 label: 'DETAIL', // <= note the different label
-            })
+            });
         }
-    }
+    },
 });
 
 await crawler.run(['https://apify.com/store']);

@@ -1,10 +1,10 @@
-import type { MemoryStorageOptions } from '@crawlee/memory-storage';
-import { MemoryStorage } from '@crawlee/memory-storage';
+import type { MemoryStorageOptions } from '@vladfrangu-dev/crawlee-memory-storage';
+import { MemoryStorage } from '@vladfrangu-dev/crawlee-memory-storage';
 import { pathExistsSync, readFileSync } from 'fs-extra';
 import { join } from 'node:path';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { EventEmitter } from 'node:events';
-import type { Dictionary, StorageClient } from '@crawlee/types';
+import type { Dictionary, StorageClient } from '@vladfrangu-dev/crawlee-types';
 import log, { LogLevel } from '@apify/log';
 import { entries } from './typedefs';
 import type { EventManager } from './events';
@@ -169,7 +169,7 @@ export interface ConfigurationOptions {
  *
  * *Using global configuration:*
  * ```js
- * import { BasicCrawler, Configuration } from 'crawlee';
+ * import { BasicCrawler, Configuration } from '@vladfrangu-dev/crawlee';
  *
  * // Get the global configuration
  * const config = Configuration.getGlobalConfig();
@@ -184,7 +184,7 @@ export interface ConfigurationOptions {
  *
  * *Using custom configuration:*
  * ```js
- * import { BasicCrawler, Configuration } from 'crawlee';
+ * import { BasicCrawler, Configuration } from '@vladfrangu-dev/crawlee';
  *
  * // Create a new configuration
  * const config = new Configuration({ persistStateIntervalMillis: 30_000 });

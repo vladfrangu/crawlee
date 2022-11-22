@@ -1,16 +1,16 @@
 import log from '@apify/log';
-import type { CheerioRoot } from '@crawlee/utils';
+import type { CheerioRoot } from '@vladfrangu-dev/crawlee-utils';
 import cheerio from 'cheerio';
-import type { Request, RequestOptions } from '@crawlee/puppeteer';
+import type { Request, RequestOptions } from '@vladfrangu-dev/crawlee-puppeteer';
 import {
     browserCrawlerEnqueueLinks,
     Configuration,
     EnqueueStrategy,
     launchPuppeteer,
     RequestQueue,
-} from '@crawlee/puppeteer';
-import { cheerioCrawlerEnqueueLinks } from '@crawlee/cheerio';
-import { launchPlaywright } from '@crawlee/playwright';
+} from '@vladfrangu-dev/crawlee-puppeteer';
+import { cheerioCrawlerEnqueueLinks } from '@vladfrangu-dev/crawlee-cheerio';
+import { launchPlaywright } from '@vladfrangu-dev/crawlee-playwright';
 import type { Browser as PlaywrightBrowser, Page as PlaywrightPage } from 'playwright';
 import type { Browser as PuppeteerBrowser, Page as PuppeteerPage } from 'puppeteer';
 

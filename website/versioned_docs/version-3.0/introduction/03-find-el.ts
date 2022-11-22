@@ -1,4 +1,4 @@
-import { CheerioCrawler } from 'crawlee';
+import { CheerioCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new CheerioCrawler({
     // Let's limit our crawls to make our

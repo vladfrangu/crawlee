@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { CheerioCrawler, createCheerioRouter, Dataset } from '@crawlee/cheerio';
+import { CheerioCrawler, createCheerioRouter, Dataset } from '@vladfrangu-dev/crawlee-cheerio';
 import { ApifyStorageLocal } from '@apify/storage-local';
 
 const mainOptions = {

@@ -5,20 +5,20 @@
     "dependencies": {
         "apify": "next",
         "@apify/storage-local": "^2.1.0",
-        "@crawlee/basic": "file:./packages/basic-crawler",
-        "@crawlee/browser-pool": "file:./packages/browser-pool",
-        "@crawlee/http": "file:./packages/http-crawler",
-        "@crawlee/jsdom": "file:./packages/jsdom-crawler",
-        "@crawlee/core": "file:./packages/core",
-        "@crawlee/memory-storage": "file:./packages/memory-storage",
-        "@crawlee/types": "file:./packages/types",
-        "@crawlee/utils": "file:./packages/utils"
+        "@vladfrangu-dev/crawlee-basic": "file:./packages/basic-crawler",
+        "@vladfrangu-dev/crawlee-browser-pool": "file:./packages/browser-pool",
+        "@vladfrangu-dev/crawlee-http": "file:./packages/http-crawler",
+        "@vladfrangu-dev/crawlee-jsdom": "file:./packages/jsdom-crawler",
+        "@vladfrangu-dev/crawlee-core": "file:./packages/core",
+        "@vladfrangu-dev/crawlee-memory-storage": "file:./packages/memory-storage",
+        "@vladfrangu-dev/crawlee-types": "file:./packages/types",
+        "@vladfrangu-dev/crawlee-utils": "file:./packages/utils"
     },
     "overrides": {
         "apify": {
-            "@crawlee/core": "file:./packages/core",
-            "@crawlee/types": "file:./packages/types",
-            "@crawlee/utils": "file:./packages/utils"
+            "@vladfrangu-dev/crawlee-core": "file:./packages/core",
+            "@vladfrangu-dev/crawlee-types": "file:./packages/types",
+            "@vladfrangu-dev/crawlee-utils": "file:./packages/utils"
         }
     },
     "devDependencies": {

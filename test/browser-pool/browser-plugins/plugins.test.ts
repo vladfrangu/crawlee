@@ -7,8 +7,8 @@ import type { Server as ProxyChainServer } from 'proxy-chain';
 import puppeteer from 'puppeteer';
 import playwright from 'playwright';
 
-import { PuppeteerPlugin, PlaywrightPlugin, PuppeteerController, PlaywrightController, PlaywrightBrowser, LaunchContext } from '@crawlee/browser-pool';
-import type { UnwrapPromise, CommonLibrary } from '@crawlee/browser-pool';
+import { PuppeteerPlugin, PlaywrightPlugin, PuppeteerController, PlaywrightController, PlaywrightBrowser, LaunchContext } from '@vladfrangu-dev/crawlee-browser-pool';
+import type { UnwrapPromise, CommonLibrary } from '@vladfrangu-dev/crawlee-browser-pool';
 
 import { runExampleComServer } from 'test/shared/_helper';
 import { createProxyServer } from './create-proxy-server';

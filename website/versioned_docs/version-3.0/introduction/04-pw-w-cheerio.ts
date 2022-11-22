@@ -1,6 +1,6 @@
 // Instead of CheerioCrawler let's use Playwright
 // to be able to render JavaScript.
-import { PlaywrightCrawler } from 'crawlee';
+import { PlaywrightCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PlaywrightCrawler({
     requestHandler: async ({ page, parseWithCheerio }) => {

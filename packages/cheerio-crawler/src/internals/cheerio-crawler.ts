@@ -7,9 +7,9 @@ import type {
     EnqueueLinksOptions,
     RequestQueue,
     Configuration,
-} from '@crawlee/http';
-import { HttpCrawler, enqueueLinks, Router, resolveBaseUrlForEnqueueLinksFiltering } from '@crawlee/http';
-import type { Dictionary } from '@crawlee/types';
+} from '@vladfrangu-dev/crawlee-http';
+import { HttpCrawler, enqueueLinks, Router, resolveBaseUrlForEnqueueLinksFiltering } from '@vladfrangu-dev/crawlee-http';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import type { CheerioOptions } from 'cheerio';
 import * as cheerio from 'cheerio';
 import { DomHandler } from 'htmlparser2';
@@ -246,7 +246,7 @@ function extractUrlsFromCheerio($: cheerio.CheerioAPI, selector: string, baseUrl
  * > Serves as a shortcut for using `Router.create<CheerioCrawlingContext>()`.
  *
  * ```ts
- * import { CheerioCrawler, createCheerioRouter } from 'crawlee';
+ * import { CheerioCrawler, createCheerioRouter } from '@vladfrangu-dev/crawlee';
  *
  * const router = createCheerioRouter();
  * router.addHandler('label-a', async (ctx) => {

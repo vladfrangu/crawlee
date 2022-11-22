@@ -1,6 +1,6 @@
 import type { Log } from '@apify/log';
 import { cryptoRandomObjectId } from '@apify/utilities';
-import type { BrowserLikeResponse, Cookie as CookieObject, Dictionary } from '@crawlee/types';
+import type { BrowserLikeResponse, Cookie as CookieObject, Dictionary } from '@vladfrangu-dev/crawlee-types';
 import type { IncomingMessage } from 'node:http';
 import { EventEmitter } from 'node:events';
 import ow from 'ow';

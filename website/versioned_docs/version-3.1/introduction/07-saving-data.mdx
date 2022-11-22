@@ -11,7 +11,7 @@ A data extraction job would not be complete without saving the data for later us
 First, add a new import to the top of the file:
 
 ```ts
-import { PlaywrightCrawler, Dataset } from 'crawlee';
+import { PlaywrightCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 ```
 
 Then, replace the `console.log(results)` call with:
@@ -23,7 +23,7 @@ await Dataset.pushData(results);
 and that's it. Unlike earlier, we are being serious now. That's it, we're done. The final code looks like this:
 
 ```js
-import { PlaywrightCrawler, Dataset } from 'crawlee';
+import { PlaywrightCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PlaywrightCrawler({
     requestHandler: async ({ page, request, enqueueLinks }) => {

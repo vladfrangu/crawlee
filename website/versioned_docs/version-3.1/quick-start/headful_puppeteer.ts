@@ -1,4 +1,4 @@
-import { PuppeteerCrawler, Dataset } from 'crawlee';
+import { PuppeteerCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PuppeteerCrawler({
     async requestHandler({ request, page, enqueueLinks, log }) {

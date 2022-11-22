@@ -13,17 +13,17 @@ body:
       label: Which package is this bug report for? If unsure which one to select, leave blank
       multiple: false
       options:
-        - "@crawlee/core"
-        - "@crawlee/cheerio (CheerioCrawler)"
-        - "@crawlee/jsdom (JSDOMCrawler)"
-        - "@crawlee/playwright (PlaywrightCrawler)"
-        - "@crawlee/puppeteer (PuppeteerCrawler)"
-        - "@crawlee/basic (BasicCrawler)"
-        - "@crawlee/http (HttpCrawler)"
-        - "@crawlee/browser (BrowserCrawler)"
-        - "@crawlee/utils"
-        - "@crawlee/browser-pool"
-        - "@crawlee/memory-storage"
+        - "@vladfrangu-dev/crawlee-core"
+        - "@vladfrangu-dev/crawlee-cheerio (CheerioCrawler)"
+        - "@vladfrangu-dev/crawlee-jsdom (JSDOMCrawler)"
+        - "@vladfrangu-dev/crawlee-playwright (PlaywrightCrawler)"
+        - "@vladfrangu-dev/crawlee-puppeteer (PuppeteerCrawler)"
+        - "@vladfrangu-dev/crawlee-basic (BasicCrawler)"
+        - "@vladfrangu-dev/crawlee-http (HttpCrawler)"
+        - "@vladfrangu-dev/crawlee-browser (BrowserCrawler)"
+        - "@vladfrangu-dev/crawlee-utils"
+        - "@vladfrangu-dev/crawlee-browser-pool"
+        - "@vladfrangu-dev/crawlee-memory-storage"
     validations:
       required: false
 

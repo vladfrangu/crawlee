@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { Dataset, PuppeteerCrawler } from '@crawlee/puppeteer';
+import { Dataset, PuppeteerCrawler } from '@vladfrangu-dev/crawlee-puppeteer';
 import { ApifyStorageLocal } from '@apify/storage-local';
 
 const mainOptions = {

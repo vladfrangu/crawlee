@@ -1,9 +1,9 @@
 import ow from 'ow';
 import type { LaunchOptions, Page, Response } from 'playwright';
-import type { BrowserPoolOptions, PlaywrightController, PlaywrightPlugin } from '@crawlee/browser-pool';
-import type { BrowserCrawlerOptions, BrowserCrawlingContext, BrowserRequestHandler, BrowserHook } from '@crawlee/browser';
-import { BrowserCrawler, Configuration, Router } from '@crawlee/browser';
-import type { Dictionary } from '@crawlee/types';
+import type { BrowserPoolOptions, PlaywrightController, PlaywrightPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
+import type { BrowserCrawlerOptions, BrowserCrawlingContext, BrowserRequestHandler, BrowserHook } from '@vladfrangu-dev/crawlee-browser';
+import { BrowserCrawler, Configuration, Router } from '@vladfrangu-dev/crawlee-browser';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import type { PlaywrightLaunchContext } from './playwright-launcher';
 import { PlaywrightLauncher } from './playwright-launcher';
 import type { DirectNavigationOptions, PlaywrightContextUtils } from './utils/playwright-utils';
@@ -246,7 +246,7 @@ export class PlaywrightCrawler extends BrowserCrawler<{ browserPlugins: [Playwri
  * > Serves as a shortcut for using `Router.create<PlaywrightCrawlingContext>()`.
  *
  * ```ts
- * import { PlaywrightCrawler, createPlaywrightRouter } from 'crawlee';
+ * import { PlaywrightCrawler, createPlaywrightRouter } from '@vladfrangu-dev/crawlee';
  *
  * const router = createPlaywrightRouter();
  * router.addHandler('label-a', async (ctx) => {

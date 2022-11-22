@@ -1,4 +1,4 @@
-import { JSDOMCrawler } from '@crawlee/jsdom';
+import { JSDOMCrawler } from '@vladfrangu-dev/crawlee-jsdom';
 import type { AddressInfo } from 'node:net';
 import http from 'node:http';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';

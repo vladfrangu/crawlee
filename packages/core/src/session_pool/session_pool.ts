@@ -1,6 +1,6 @@
 import type { Log } from '@apify/log';
 import { EventEmitter } from 'node:events';
-import type { Dictionary } from '@crawlee/types';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import ow from 'ow';
 import { Configuration } from '../configuration';
 import { log as defaultLog } from '../log';

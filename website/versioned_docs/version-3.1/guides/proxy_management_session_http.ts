@@ -1,4 +1,4 @@
-import { HttpCrawler, ProxyConfiguration } from 'crawlee';
+import { HttpCrawler, ProxyConfiguration } from '@vladfrangu-dev/crawlee';
 
 const proxyConfiguration = new ProxyConfiguration({ /* opts */ });
 

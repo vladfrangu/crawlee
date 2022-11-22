@@ -1,4 +1,4 @@
-import type { Dictionary, StorageClient } from '@crawlee/types';
+import type { Dictionary, StorageClient } from '@vladfrangu-dev/crawlee-types';
 import { Configuration } from '../configuration';
 import type { Constructor } from '../typedefs';
 

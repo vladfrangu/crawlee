@@ -1,4 +1,4 @@
-import type { BrowserLikeResponse, Dictionary, Cookie as CookieObject } from '@crawlee/types';
+import type { BrowserLikeResponse, Dictionary, Cookie as CookieObject } from '@vladfrangu-dev/crawlee-types';
 import type { IncomingMessage } from 'node:http';
 import { Cookie, CookieJar } from 'tough-cookie';
 import { CookieParseError } from './session_pool/errors';

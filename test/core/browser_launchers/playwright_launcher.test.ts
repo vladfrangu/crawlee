@@ -9,7 +9,7 @@ import util from 'util';
 import portastic from 'portastic';
 // @ts-expect-error no types
 import basicAuthParser from 'basic-auth-parser';
-import { BrowserLauncher, Configuration, launchPlaywright, PlaywrightLauncher } from '@crawlee/playwright';
+import { BrowserLauncher, Configuration, launchPlaywright, PlaywrightLauncher } from '@vladfrangu-dev/crawlee-playwright';
 
 import type { AddressInfo } from 'net';
 import type { Browser, BrowserType } from 'playwright';

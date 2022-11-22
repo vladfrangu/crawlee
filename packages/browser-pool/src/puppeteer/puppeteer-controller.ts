@@ -1,5 +1,5 @@
 import { tryCancel } from '@apify/timeout';
-import type { Cookie } from '@crawlee/types';
+import type { Cookie } from '@vladfrangu-dev/crawlee-types';
 import type Puppeteer from './puppeteer-proxy-per-page';
 import { BrowserController } from '../abstract-classes/browser-controller';
 import { log } from '../logger';

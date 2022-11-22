@@ -10,12 +10,12 @@ import ApiLink from '@site/src/components/ApiLink';
 
 There are three ways of changing the configuration parameters:
 
-- adding `crawlee.json` file to your project
-- setting environment variables
-- using the `Configuration` class
+-   adding `crawlee.json` file to your project
+-   setting environment variables
+-   using the `Configuration` class
 
 You could also combine all the above, but you should keep in mind, that the precedence for these 3 options is the following:
-***`crawlee.json`*** < ***constructor options*** < ***environment variables***.
+**_`crawlee.json`_** < **_constructor options_** < **_environment variables_**.
 
 `crawlee.json` is a baseline. The options provided in the `Configuration` constructor will override the options provided in the JSON. Environment variables will override both.
 
@@ -25,15 +25,15 @@ The first option you could use for configuring Crawlee is `crawlee.json` file. T
 
 ```json title="crawlee.json"
 {
-  "persistStateIntervalMillis": 10000,
-  "logLevel": "DEBUG"
+    "persistStateIntervalMillis": 10000,
+    "logLevel": "DEBUG"
 }
 ```
 
 With `crawlee.json` you don't need to do anything else in the code:
 
 ```js
-import { CheerioCrawler, sleep } from 'crawlee';
+import { CheerioCrawler, sleep } from '@vladfrangu-dev/crawlee';
 // We are not importing nor passing
 // the Configuration to the crawler.
 // We are not assigning any env vars either.
@@ -44,7 +44,7 @@ crawler.router.addDefaultHandler(async ({ request }) => {
     // and add the second request to the queue
     if (request.url === 'https://www.example.com/1') {
         await sleep(5_000);
-        await crawler.addRequests(['https://www.example.com/2'])
+        await crawler.addRequests(['https://www.example.com/2']);
     }
     // for the second request we wait for 10 seconds,
     // and abort the run
@@ -130,7 +130,7 @@ The last option to adjust Crawlee configuration is to use the <ApiLink to="core/
 By default, there is a global singleton instance of `Configuration` class, it is used by the crawlers and some other classes that depend on a configurable behavior. In most cases you don't need to adjust any options there, but if needed - you can get access to it via <ApiLink to="core/class/Configuration#getGlobalConfig">`Configuration.getGlobalConfig()`</ApiLink> function. Now you can easily <ApiLink to="core/class/Configuration#get">`get`</ApiLink> and <ApiLink to="core/class/Configuration#set">`set`</ApiLink> the <ApiLink to="core/interface/ConfigurationOptions">`ConfigurationOptions`</ApiLink>.
 
 ```js
-import { CheerioCrawler, Configuration, sleep } from 'crawlee';
+import { CheerioCrawler, Configuration, sleep } from '@vladfrangu-dev/crawlee';
 
 // Get the global configuration
 const config = Configuration.getGlobalConfig();
@@ -147,7 +147,7 @@ crawler.router.addDefaultHandler(async ({ request }) => {
     // and add the second request to the queue
     if (request.url === 'https://www.example.com/1') {
         await sleep(5_000);
-        await crawler.addRequests(['https://www.example.com/2'])
+        await crawler.addRequests(['https://www.example.com/2']);
     }
     // For the second request we wait for 10 seconds,
     // and abort the run
@@ -180,7 +180,7 @@ and the crawler was forcefully aborted after ~15 seconds of run time before it p
 Alternatively, you can create a custom configuration. In this case you need to pass it to the class that is going to use it, e.g. to the crawler. Let's adjust the previous example:
 
 ```js
-import { CheerioCrawler, Configuration, sleep } from 'crawlee';
+import { CheerioCrawler, Configuration, sleep } from '@vladfrangu-dev/crawlee';
 
 // Create new configuration
 const config = new Configuration({
@@ -196,7 +196,7 @@ crawler.router.addDefaultHandler(async ({ request }) => {
     // and add the second request to the queue
     if (request.url === 'https://www.example.com/1') {
         await sleep(5_000);
-        await crawler.addRequests(['https://www.example.com/2'])
+        await crawler.addRequests(['https://www.example.com/2']);
     }
     // for the second request we wait for 10 seconds,
     // and abort the run

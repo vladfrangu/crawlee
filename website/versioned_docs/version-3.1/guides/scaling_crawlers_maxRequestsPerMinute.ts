@@ -1,4 +1,4 @@
-import { CheerioCrawler } from 'crawlee';
+import { CheerioCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new CheerioCrawler({
     // Let the crawler know it can run up to 100 requests concurrently at any time

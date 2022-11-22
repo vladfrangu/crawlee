@@ -1,5 +1,5 @@
 {
-    "name": "@crawlee/utils",
+    "name": "@vladfrangu-dev/crawlee-utils",
     "version": "3.1.2",
     "description": "A set of shared utilities that can be used by crawlers",
     "engines": {
@@ -49,7 +49,7 @@
     "dependencies": {
         "@apify/log": "^2.0.0",
         "@apify/ps-tree": "^1.1.4",
-        "@crawlee/types": "^3.1.2",
+        "@vladfrangu-dev/crawlee-types": "^3.1.2",
         "cheerio": "1.0.0-rc.12",
         "got-scraping": "^3.2.9",
         "tslib": "^2.4.0"

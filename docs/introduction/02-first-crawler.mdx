@@ -1,6 +1,6 @@
 ---
 id: first-crawler
-title: "First crawler"
+title: 'First crawler'
 description: Your first steps into the world of scraping with Crawlee
 ---
 
@@ -41,7 +41,7 @@ We are using a JavaScript feature called [Top level await](https://blog.saeloun.
 Earlier you learned that the crawler uses a queue of requests as its source of URLs to crawl. Let's create it and add the first request.
 
 ```ts title="src/main.mjs"
-import { RequestQueue } from 'crawlee';
+import { RequestQueue } from '@vladfrangu-dev/crawlee';
 
 // First you create the request queue instance.
 const requestQueue = await RequestQueue.open();
@@ -67,7 +67,7 @@ Let's continue with the earlier `RequestQueue` example.
 
 ```ts title="src/main.mjs"
 // Add import of CheerioCrawler
-import { RequestQueue, CheerioCrawler } from 'crawlee';
+import { RequestQueue, CheerioCrawler } from '@vladfrangu-dev/crawlee';
 
 const requestQueue = await RequestQueue.open();
 await requestQueue.addRequest({ url: 'https://crawlee.dev' });
@@ -83,8 +83,8 @@ const crawler = new CheerioCrawler({
         // See Cheerio documentation for API docs.
         const title = $('title').text();
         console.log(`The title of "${request.url}" is: ${title}.`);
-    }
-})
+    },
+});
 
 // Start the crawler and wait for it to finish
 await crawler.run();
@@ -102,14 +102,14 @@ Earlier we mentioned that you'll learn how to use the `crawler.addRequests()` me
 
 ```ts title="src/main.mjs"
 // You don't need to import RequestQueue anymore
-import { CheerioCrawler } from 'crawlee';
+import { CheerioCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new CheerioCrawler({
     async requestHandler({ $, request }) {
         const title = $('title').text();
         console.log(`The title of "${request.url}" is: ${title}.`);
-    }
-})
+    },
+});
 
 // Start the crawler with the provided URLs
 await crawler.run(['https://crawlee.dev']);
@@ -118,4 +118,5 @@ await crawler.run(['https://crawlee.dev']);
 When you run this code, you'll see exactly the same output as with the earlier, longer example. The `RequestQueue` is still there, it's just managed by the crawler automatically.
 
 ## Next lesson
+
 In the next lesson you'll learn about crawling links. That means finding new URLs on the pages you crawl and adding them to the `RequestQueue` for the crawler to visit.

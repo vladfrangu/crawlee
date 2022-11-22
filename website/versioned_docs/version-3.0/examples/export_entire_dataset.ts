@@ -1,4 +1,4 @@
-import { Dataset } from 'crawlee';
+import { Dataset } from '@vladfrangu-dev/crawlee';
 
 // Retrieve or generate two items to be pushed
 const data = [

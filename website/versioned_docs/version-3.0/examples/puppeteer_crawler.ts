@@ -1,4 +1,4 @@
-import { Dataset, PuppeteerCrawler } from 'crawlee';
+import { Dataset, PuppeteerCrawler } from '@vladfrangu-dev/crawlee';
 
 // Create an instance of the PuppeteerCrawler class - a crawler
 // that automatically loads the URLs in headless Chrome / Puppeteer.

@@ -2,7 +2,7 @@
 // Note that we are not using the request list at all,
 // and not using the request queue explicitly here.
 
-import { PuppeteerCrawler } from 'crawlee';
+import { PuppeteerCrawler } from '@vladfrangu-dev/crawlee';
 
 // Prepare the sources array with URLs to visit (it can contain millions of URLs)
 const sources = [

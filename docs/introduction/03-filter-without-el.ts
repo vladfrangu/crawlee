@@ -1,4 +1,4 @@
-import { CheerioCrawler } from 'crawlee';
+import { CheerioCrawler } from '@vladfrangu-dev/crawlee';
 import { URL } from 'node:url';
 
 const crawler = new CheerioCrawler({

@@ -1,4 +1,4 @@
-import { JSDOMCrawler } from '@crawlee/jsdom';
+import { JSDOMCrawler } from '@vladfrangu-dev/crawlee-jsdom';
 
 const crawler = new JSDOMCrawler({
     runScripts: true,

@@ -1,4 +1,4 @@
-import type * as storage from '@crawlee/types';
+import type * as storage from '@vladfrangu-dev/crawlee-types';
 import { access, opendir, readFile } from 'node:fs/promises';
 import { extname, resolve } from 'node:path';
 import mimeTypes from 'mime-types';

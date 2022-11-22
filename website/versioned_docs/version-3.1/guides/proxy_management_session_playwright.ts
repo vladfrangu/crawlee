@@ -1,4 +1,4 @@
-import { PlaywrightCrawler, ProxyConfiguration } from 'crawlee';
+import { PlaywrightCrawler, ProxyConfiguration } from '@vladfrangu-dev/crawlee';
 
 const proxyConfiguration = new ProxyConfiguration({ /* opts */ });
 

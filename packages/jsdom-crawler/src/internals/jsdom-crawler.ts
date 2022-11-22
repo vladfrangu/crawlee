@@ -8,9 +8,9 @@ import type {
     EnqueueLinksOptions,
     RequestQueue,
     Configuration,
-} from '@crawlee/http';
-import { HttpCrawler, enqueueLinks, Router, resolveBaseUrlForEnqueueLinksFiltering } from '@crawlee/http';
-import type { BatchAddRequestsResult, Dictionary } from '@crawlee/types';
+} from '@vladfrangu-dev/crawlee-http';
+import { HttpCrawler, enqueueLinks, Router, resolveBaseUrlForEnqueueLinksFiltering } from '@vladfrangu-dev/crawlee-http';
+import type { BatchAddRequestsResult, Dictionary } from '@vladfrangu-dev/crawlee-types';
 import { concatStreamToBuffer } from '@apify/utilities';
 import type { DOMWindow } from 'jsdom';
 import { JSDOM, ResourceLoader } from 'jsdom';
@@ -249,7 +249,7 @@ function extractUrlsFromWindow(window: DOMWindow, selector: string, baseUrl: str
  * > Serves as a shortcut for using `Router.create<JSDOMCrawlingContext>()`.
  *
  * ```ts
- * import { JSDOMCrawler, createJSDOMRouter } from 'crawlee';
+ * import { JSDOMCrawler, createJSDOMRouter } from '@vladfrangu-dev/crawlee';
  *
  * const router = createJSDOMRouter();
  * router.addHandler('label-a', async (ctx) => {

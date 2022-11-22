@@ -1,5 +1,5 @@
 {
-    "name": "@crawlee/types",
+    "name": "@vladfrangu-dev/crawlee-types",
     "version": "3.1.2",
     "description": "Shared types for the crawlee projects",
     "engines": {
@@ -19,7 +19,7 @@
     "keywords": [
         "apify",
         "api",
-        "crawlee",
+        "@vladfrangu-dev/crawlee",
         "types"
     ],
     "author": {

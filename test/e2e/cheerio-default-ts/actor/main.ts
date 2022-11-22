@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { CheerioCrawler, Dataset } from '@crawlee/cheerio';
+import { CheerioCrawler, Dataset } from '@vladfrangu-dev/crawlee-cheerio';
 import { ApifyStorageLocal } from '@apify/storage-local';
 
 if (process.env.STORAGE_IMPLEMENTATION === 'LOCAL') {

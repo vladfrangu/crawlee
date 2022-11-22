@@ -1,19 +1,19 @@
 /* eslint-disable import/export */
 
-import { log, enqueueLinks } from '@crawlee/core';
-import { social, sleep, downloadListOfUrls, parseOpenGraph } from '@crawlee/utils';
-import { puppeteerUtils } from '@crawlee/puppeteer';
-import { playwrightUtils } from '@crawlee/playwright';
+import { log, enqueueLinks } from '@vladfrangu-dev/crawlee-core';
+import { social, sleep, downloadListOfUrls, parseOpenGraph } from '@vladfrangu-dev/crawlee-utils';
+import { puppeteerUtils } from '@vladfrangu-dev/crawlee-puppeteer';
+import { playwrightUtils } from '@vladfrangu-dev/crawlee-playwright';
 
-export * from '@crawlee/core';
-export * from '@crawlee/utils';
-export * from '@crawlee/basic';
-export * from '@crawlee/browser';
-export * from '@crawlee/http';
-export * from '@crawlee/jsdom';
-export * from '@crawlee/cheerio';
-export * from '@crawlee/puppeteer';
-export * from '@crawlee/playwright';
+export * from '@vladfrangu-dev/crawlee-core';
+export * from '@vladfrangu-dev/crawlee-utils';
+export * from '@vladfrangu-dev/crawlee-basic';
+export * from '@vladfrangu-dev/crawlee-browser';
+export * from '@vladfrangu-dev/crawlee-http';
+export * from '@vladfrangu-dev/crawlee-jsdom';
+export * from '@vladfrangu-dev/crawlee-cheerio';
+export * from '@vladfrangu-dev/crawlee-puppeteer';
+export * from '@vladfrangu-dev/crawlee-playwright';
 
 export const utils = {
     puppeteer: puppeteerUtils,

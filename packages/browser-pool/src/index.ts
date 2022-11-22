@@ -8,7 +8,7 @@
  *  BrowserPool,
  *  PuppeteerPlugin,
  *  PlaywrightPlugin
- * } from '@crawlee/browser-pool';
+ * } from '@vladfrangu-dev/crawlee-browser-pool';
  * import puppeteer from 'puppeteer';
  * import playwright from 'playwright';
  *

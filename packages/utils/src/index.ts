@@ -8,4 +8,4 @@ export * as social from './internals/social';
 export * from './internals/typedefs';
 export * from './internals/error_tracker';
 export * from './internals/open_graph_parser';
-export { Dictionary, Awaitable, Constructor } from '@crawlee/types';
+export { Dictionary, Awaitable, Constructor } from '@vladfrangu-dev/crawlee-types';

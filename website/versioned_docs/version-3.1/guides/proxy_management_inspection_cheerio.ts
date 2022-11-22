@@ -1,4 +1,4 @@
-import { CheerioCrawler, ProxyConfiguration } from 'crawlee';
+import { CheerioCrawler, ProxyConfiguration } from '@vladfrangu-dev/crawlee';
 
 const proxyConfiguration = new ProxyConfiguration({ /* opts */ });
 

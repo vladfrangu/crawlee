@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { BasicCrawler, log as defaultLog, LogLevel } from '@crawlee/basic';
+import { BasicCrawler, log as defaultLog, LogLevel } from '@vladfrangu-dev/crawlee-basic';
 import { ApifyStorageLocal } from '@apify/storage-local';
 
 const crawlerLogger = defaultLog.child({

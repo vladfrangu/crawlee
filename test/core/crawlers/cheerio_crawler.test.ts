@@ -1,6 +1,6 @@
 import log, { Log } from '@apify/log';
-import type { Dictionary } from '@crawlee/utils';
-import { sleep } from '@crawlee/utils';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-utils';
+import { sleep } from '@vladfrangu-dev/crawlee-utils';
 import type { OptionsInit } from 'got-scraping';
 import { gotScraping } from 'got-scraping';
 import type {
@@ -8,7 +8,7 @@ import type {
     CheerioCrawlingContext,
     ProxyInfo,
     Source,
-} from '@crawlee/cheerio';
+} from '@vladfrangu-dev/crawlee-cheerio';
 import {
     AutoscaledPool,
     CheerioCrawler,
@@ -19,7 +19,7 @@ import {
     Request,
     RequestList,
     Session,
-} from '@crawlee/cheerio';
+} from '@vladfrangu-dev/crawlee-cheerio';
 import type { IncomingHttpHeaders, Server } from 'http';
 import iconv from 'iconv-lite';
 import { Readable } from 'stream';

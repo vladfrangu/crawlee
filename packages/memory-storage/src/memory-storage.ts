@@ -1,6 +1,6 @@
 /* eslint-disable import/no-duplicates */
-import type * as storage from '@crawlee/types';
-import type { Dictionary } from '@crawlee/types';
+import type * as storage from '@vladfrangu-dev/crawlee-types';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import { s } from '@sapphire/shapeshift';
 import { ensureDirSync, pathExistsSync } from 'fs-extra';
 import { renameSync } from 'node:fs';

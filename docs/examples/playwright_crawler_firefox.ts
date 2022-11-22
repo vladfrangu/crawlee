@@ -1,4 +1,4 @@
-import { PlaywrightCrawler } from 'crawlee';
+import { PlaywrightCrawler } from '@vladfrangu-dev/crawlee';
 import { firefox } from 'playwright';
 
 // Create an instance of the PlaywrightCrawler class.

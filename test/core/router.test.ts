@@ -1,6 +1,6 @@
-import type { CrawlingContext } from '@crawlee/core';
-import { MissingRouteError, Router } from '@crawlee/core';
-import { BasicCrawler } from '@crawlee/basic';
+import type { CrawlingContext } from '@vladfrangu-dev/crawlee-core';
+import { MissingRouteError, Router } from '@vladfrangu-dev/crawlee-core';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee-basic';
 
 describe('Router', () => {
     test('should be callable and route based on the label', async () => {

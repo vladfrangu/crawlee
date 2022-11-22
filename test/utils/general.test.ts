@@ -1,4 +1,4 @@
-import { isDocker, weightedAvg, sleep, snakeCaseToCamelCase } from '@crawlee/utils';
+import { isDocker, weightedAvg, sleep, snakeCaseToCamelCase } from '@vladfrangu-dev/crawlee-utils';
 import type { IncomingMessage } from 'node:http';
 import asyncFs from 'node:fs/promises';
 

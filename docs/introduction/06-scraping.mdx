@@ -1,7 +1,7 @@
 ---
 id: scraping
-title: "Scraping the Store"
-sidebar_label: "Scraping"
+title: 'Scraping the Store'
+sidebar_label: 'Scraping'
 description: Your first steps into the world of scraping with Crawlee
 ---
 
@@ -9,13 +9,13 @@ import ApiLink from '@site/src/components/ApiLink';
 
 In the [Real-world project chapter](./real-world-project#choosing-the-data-you-need), we created a list of the information we wanted to collect about the actors in the Apify Store. Let's review that and figure out ways to access the data.
 
-- URL
-- Owner
-- Unique identifier (such as `apify/web-scraper`)
-- Title
-- Description
-- Last modification date
-- Number of runs
+-   URL
+-   Owner
+-   Unique identifier (such as `apify/web-scraper`)
+-   Title
+-   Description
+-   Last modification date
+-   Number of runs
 
 ![data to scrape](/img/getting-started/scraping-practice.jpg 'Overview of data to be scraped.')
 
@@ -86,7 +86,9 @@ DevTools tell us that the `modifiedDate` can be found in a `<time>` element with
 ![actor last modification date selector](/img/getting-started/modified-date.jpg 'Finding actor last modification date in DevTools.')
 
 ```js
-const modifiedTimestamp = await page.locator('time[datetime]').getAttribute('datetime');
+const modifiedTimestamp = await page
+    .locator('time[datetime]')
+    .getAttribute('datetime');
 const modifiedDate = new Date(Number(modifiedTimestamp));
 ```
 
@@ -99,7 +101,9 @@ But we would much rather see a readable date in our results, not a unix timestam
 We're finishing up with the `runCount`. There's no specific element like `<time>`, so we need to create a complex selector and then do a transformation on the result.
 
 ```js
-const runsRow = page.locator('ul.ActorHeader-stats > li').filter({ hasText: 'Runs' });
+const runsRow = page
+    .locator('ul.ActorHeader-stats > li')
+    .filter({ hasText: 'Runs' });
 const runCountString = await runsRow.locator('span').last().textContent();
 const runCount = Number(runCountString.replaceAll(',', ''));
 ```
@@ -117,10 +121,14 @@ const title = await page.locator('h1').textContent();
 
 const description = await page.locator('span.actor-description').textContent();
 
-const modifiedTimestamp = await page.locator('time[datetime]').getAttribute('datetime');
+const modifiedTimestamp = await page
+    .locator('time[datetime]')
+    .getAttribute('datetime');
 const modifiedDate = new Date(Number(modifiedTimestamp));
 
-const runsRow = page.locator('ul.ActorHeader-stats > li').filter({ hasText: 'Runs' });
+const runsRow = page
+    .locator('ul.ActorHeader-stats > li')
+    .filter({ hasText: 'Runs' });
 const runCountString = await runsRow.locator('span').last().textContent();
 const runCount = Number(runCountString.replaceAll(',', ''));
 ```
@@ -130,51 +138,57 @@ const runCount = Number(runCountString.replaceAll(',', ''));
 We have everything we need so grab our newly created scraping logic, dump it into our original `requestHandler()` and see the magic happen!
 
 ```js
-import { PlaywrightCrawler } from 'crawlee';
+import { PlaywrightCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PlaywrightCrawler({
     requestHandler: async ({ page, request, enqueueLinks }) => {
-        console.log(`Processing: ${request.url}`)
+        console.log(`Processing: ${request.url}`);
         if (request.label === 'DETAIL') {
             const urlParts = request.url.split('/').slice(-2);
-            const modifiedTimestamp = await page.locator('time[datetime]').getAttribute('datetime');
-            const runsRow = page.locator('ul.ActorHeader-stats > li').filter({ hasText: 'Runs' });
-            const runCountString = await runsRow.locator('span').last().textContent();
+            const modifiedTimestamp = await page
+                .locator('time[datetime]')
+                .getAttribute('datetime');
+            const runsRow = page
+                .locator('ul.ActorHeader-stats > li')
+                .filter({ hasText: 'Runs' });
+            const runCountString = await runsRow
+                .locator('span')
+                .last()
+                .textContent();
 
             const results = {
                 url: request.url,
                 uniqueIdentifier: urlParts.join('/'),
                 owner: urlParts[0],
                 title: await page.locator('h1').textContent(),
-                description: await page.locator('span.actor-description').textContent(),
+                description: await page
+                    .locator('span.actor-description')
+                    .textContent(),
                 modifiedDate: new Date(Number(modifiedTimestamp)),
                 runCount: Number(runCountString.replaceAll(',', '')),
-            }
+            };
 
-            console.log(results)
+            console.log(results);
         } else {
             await page.waitForSelector('.ActorStorePagination-pages a');
             await enqueueLinks({
                 selector: '.ActorStorePagination-pages > a',
                 label: 'LIST',
-            })
+            });
             await page.waitForSelector('.ActorStoreItem');
             await enqueueLinks({
                 selector: '.ActorStoreItem',
                 label: 'DETAIL', // <= note the different label
-            })
+            });
         }
-    }
+    },
 });
 
 await crawler.run(['https://apify.com/store']);
 ```
-
-
 
 When you run the actor, you should see the crawled URLs and their scraped data printed to the console.
 
 ## Next lesson
 
 In the next lesson, we will show you how to save the data you scraped to the disk for further processing.
-

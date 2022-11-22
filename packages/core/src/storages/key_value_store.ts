@@ -2,7 +2,7 @@ import JSON5 from 'json5';
 import { KEY_VALUE_STORE_KEY_REGEX } from '@apify/consts';
 import { jsonStringifyExtended } from '@apify/utilities';
 import ow, { ArgumentError } from 'ow';
-import type { Dictionary, KeyValueStoreClient, StorageClient } from '@crawlee/types';
+import type { Dictionary, KeyValueStoreClient, StorageClient } from '@vladfrangu-dev/crawlee-types';
 import { join } from 'node:path';
 import { readFile } from 'node:fs/promises';
 import { Configuration } from '../configuration';

@@ -1,4 +1,4 @@
-import { BrowserPool, PlaywrightPlugin } from '@crawlee/browser-pool';
+import { BrowserPool, PlaywrightPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
 import playwright from 'playwright';
 
 describe('BrowserPool - Using multiple plugins', () => {

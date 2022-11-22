@@ -1,5 +1,5 @@
 import ow from 'ow';
-import { ErrorTracker } from '@crawlee/utils';
+import { ErrorTracker } from '@vladfrangu-dev/crawlee-utils';
 import { log as defaultLog } from '../log';
 import { KeyValueStore } from '../storages/key_value_store';
 import type { EventManager } from '../events/event_manager';

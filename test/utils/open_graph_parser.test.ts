@@ -1,4 +1,4 @@
-import { parseOpenGraph } from '@crawlee/utils';
+import { parseOpenGraph } from '@vladfrangu-dev/crawlee-utils';
 import { load } from 'cheerio';
 
 describe('parseOpenGraph', () => {

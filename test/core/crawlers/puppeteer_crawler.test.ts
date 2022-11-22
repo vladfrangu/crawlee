@@ -3,16 +3,16 @@ import type {
     PuppeteerCrawlingContext,
     PuppeteerGoToOptions,
     Request,
-} from '@crawlee/puppeteer';
+} from '@vladfrangu-dev/crawlee-puppeteer';
 import {
     ProxyConfiguration,
     PuppeteerCrawler,
     RequestList,
     RequestQueue,
     Session,
-} from '@crawlee/puppeteer';
-import type { Cookie } from '@crawlee/types';
-import { sleep } from '@crawlee/utils';
+} from '@vladfrangu-dev/crawlee-puppeteer';
+import type { Cookie } from '@vladfrangu-dev/crawlee-types';
+import { sleep } from '@vladfrangu-dev/crawlee-utils';
 import { once } from 'events';
 import type { Server } from 'http';
 import { createServer } from 'http';

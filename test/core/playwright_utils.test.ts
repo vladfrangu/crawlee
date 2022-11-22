@@ -1,7 +1,7 @@
 import path from 'path';
 import log from '@apify/log';
 import type { Server } from 'http';
-import { KeyValueStore, Request, launchPlaywright, playwrightUtils } from '@crawlee/playwright';
+import { KeyValueStore, Request, launchPlaywright, playwrightUtils } from '@vladfrangu-dev/crawlee-playwright';
 import type { Browser, Page } from 'playwright';
 import { chromium } from 'playwright';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';

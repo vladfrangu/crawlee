@@ -7,7 +7,7 @@
  * 4. Resume, record, ???, profit!
  */
 
-import { PuppeteerCrawler, sleep } from 'crawlee';
+import { PuppeteerCrawler, sleep } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PuppeteerCrawler({
     headless: false,

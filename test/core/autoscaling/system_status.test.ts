@@ -1,5 +1,5 @@
 import log from '@apify/log';
-import { Snapshotter, SystemStatus } from '@crawlee/core';
+import { Snapshotter, SystemStatus } from '@vladfrangu-dev/crawlee-core';
 
 describe('SystemStatus', () => {
     let logLevel: number;

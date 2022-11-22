@@ -61,7 +61,7 @@ export function weightedAvg(arrValues: number[], arrWeights: number[]): number {
  * **Example usage:**
  *
  * ```
- * import { sleep } from 'crawlee';
+ * import { sleep } from '@vladfrangu-dev/crawlee';
  *
  * ...
  *

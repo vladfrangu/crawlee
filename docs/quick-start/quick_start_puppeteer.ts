@@ -1,4 +1,4 @@
-import { PuppeteerCrawler, Dataset } from 'crawlee';
+import { PuppeteerCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 // PuppeteerCrawler crawls the web using a headless
 // browser controlled by the Puppeteer library.

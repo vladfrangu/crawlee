@@ -5,5 +5,5 @@ const importLocal = require('import-local');
 
 if (!importLocal(__filename)) {
     // eslint-disable-next-line
-    require('@crawlee/cli');
+    require('@vladfrangu-dev/crawlee-cli');
 }

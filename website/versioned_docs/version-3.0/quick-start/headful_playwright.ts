@@ -1,4 +1,4 @@
-import { PlaywrightCrawler, Dataset } from 'crawlee';
+import { PlaywrightCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PlaywrightCrawler({
     async requestHandler({ request, page, enqueueLinks, log }) {

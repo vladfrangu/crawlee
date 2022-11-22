@@ -27,7 +27,7 @@ function getCLIVersion(): string {
     }
 }
 
-const cli = yargs.scriptName('crawlee')
+const cli = yargs.scriptName('@vladfrangu-dev/crawlee')
     .version(getCLIVersion())
     .usage('Usage: $0 <command> [options]')
     .example('$0 run --no-purge', 'Runs the project in current working directory and disables automatic purging of default storages')

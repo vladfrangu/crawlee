@@ -1,6 +1,6 @@
 import type { Browser, BrowserType, Page } from 'playwright';
 import { tryCancel } from '@apify/timeout';
-import type { Cookie } from '@crawlee/types';
+import type { Cookie } from '@vladfrangu-dev/crawlee-types';
 import { BrowserController } from '../abstract-classes/browser-controller';
 import { anonymizeProxySugar } from '../anonymize-proxy';
 import type { PlaywrightPlugin } from './playwright-plugin';

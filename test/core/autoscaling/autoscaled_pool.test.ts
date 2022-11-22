@@ -1,7 +1,7 @@
 /* eslint-disable dot-notation */
 import log from '@apify/log';
-import { AutoscaledPool } from '@crawlee/core';
-import { sleep } from '@crawlee/utils';
+import { AutoscaledPool } from '@vladfrangu-dev/crawlee-core';
+import { sleep } from '@vladfrangu-dev/crawlee-utils';
 
 /* eslint-disable no-underscore-dangle */
 

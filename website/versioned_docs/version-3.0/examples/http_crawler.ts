@@ -1,4 +1,4 @@
-import { Dataset, HttpCrawler, log, LogLevel } from 'crawlee';
+import { Dataset, HttpCrawler, log, LogLevel } from '@vladfrangu-dev/crawlee';
 
 // Crawlers come with various utilities, e.g. for logging.
 // Here we use debug level of logging to improve the debugging experience.

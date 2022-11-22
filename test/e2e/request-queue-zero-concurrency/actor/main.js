@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { CheerioCrawler, log, RequestQueue } from '@crawlee/cheerio';
+import { CheerioCrawler, log, RequestQueue } from '@vladfrangu-dev/crawlee-cheerio';
 import { ApifyStorageLocal } from '@apify/storage-local';
 
 log.setLevel(log.LEVELS.DEBUG);

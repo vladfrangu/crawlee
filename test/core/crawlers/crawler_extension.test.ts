@@ -1,4 +1,4 @@
-import { CrawlerExtension } from '@crawlee/core';
+import { CrawlerExtension } from '@vladfrangu-dev/crawlee-core';
 
 describe('CrawlerExtension', () => {
     test('should work', () => {

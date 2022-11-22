@@ -1,5 +1,5 @@
 // For more information, see https://crawlee.dev/
-import { PlaywrightCrawler, ProxyConfiguration } from 'crawlee';
+import { PlaywrightCrawler, ProxyConfiguration } from '@vladfrangu-dev/crawlee';
 import { router } from './routes.js';
 
 const startUrls = ['https://crawlee.dev'];

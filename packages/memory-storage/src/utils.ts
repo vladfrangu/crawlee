@@ -1,5 +1,5 @@
 import defaultLog from '@apify/log';
-import type * as storage from '@crawlee/types';
+import type * as storage from '@vladfrangu-dev/crawlee-types';
 import { s } from '@sapphire/shapeshift';
 import { createHash } from 'node:crypto';
 import { REQUEST_ID_LENGTH } from './consts';

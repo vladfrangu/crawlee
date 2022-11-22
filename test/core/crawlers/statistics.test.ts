@@ -1,5 +1,5 @@
-import { Statistics, Configuration, EventType } from '@crawlee/core';
-import type { Dictionary } from '@crawlee/utils';
+import { Statistics, Configuration, EventType } from '@vladfrangu-dev/crawlee-core';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-utils';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';
 
 describe('Statistics', () => {

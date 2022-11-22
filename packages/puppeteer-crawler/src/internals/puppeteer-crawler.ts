@@ -3,10 +3,10 @@ import type {
     BrowserCrawlerOptions,
     BrowserCrawlingContext,
     BrowserHook,
-} from '@crawlee/browser';
-import { BrowserCrawler, Configuration, Router } from '@crawlee/browser';
-import type { BrowserPoolOptions, PuppeteerController, PuppeteerPlugin } from '@crawlee/browser-pool';
-import type { Dictionary } from '@crawlee/types';
+} from '@vladfrangu-dev/crawlee-browser';
+import { BrowserCrawler, Configuration, Router } from '@vladfrangu-dev/crawlee-browser';
+import type { BrowserPoolOptions, PuppeteerController, PuppeteerPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import ow from 'ow';
 import type { HTTPResponse, LaunchOptions, Page } from 'puppeteer';
 import type { PuppeteerLaunchContext } from './puppeteer-launcher';
@@ -196,7 +196,7 @@ export class PuppeteerCrawler extends BrowserCrawler<{ browserPlugins: [Puppetee
  * > Serves as a shortcut for using `Router.create<PuppeteerCrawlingContext>()`.
  *
  * ```ts
- * import { PuppeteerCrawler, createPuppeteerRouter } from 'crawlee';
+ * import { PuppeteerCrawler, createPuppeteerRouter } from '@vladfrangu-dev/crawlee';
  *
  * const router = createPuppeteerRouter();
  * router.addHandler('label-a', async (ctx) => {

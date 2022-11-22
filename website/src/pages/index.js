@@ -93,7 +93,7 @@ function Features() {
     );
 }
 
-const example = `import { PlaywrightCrawler, Dataset } from 'crawlee';
+const example = `import { PlaywrightCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 // PlaywrightCrawler crawls the web using a headless
 // browser controlled by the Playwright library.

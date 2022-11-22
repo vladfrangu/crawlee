@@ -130,7 +130,7 @@ const runCount = Number(runCountString.replaceAll(',', ''));
 We have everything we need so grab our newly created scraping logic, dump it into our original `requestHandler()` and see the magic happen!
 
 ```js
-import { PlaywrightCrawler } from 'crawlee';
+import { PlaywrightCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new PlaywrightCrawler({
     requestHandler: async ({ page, request, enqueueLinks }) => {

@@ -1,6 +1,6 @@
 import { Actor, KeyValueStore } from 'apify';
 import { ApifyStorageLocal } from '@apify/storage-local';
-import { BasicCrawler } from '@crawlee/basic';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee-basic';
 
 const mainOptions = {
     exit: Actor.isAtHome(),
@@ -12,7 +12,7 @@ await Actor.main(async () => {
 
     const crawler = new BasicCrawler({
         async requestHandler() {
-            const automaticValue = await kv.getAutoSavedValue('crawlee');
+            const automaticValue = await kv.getAutoSavedValue('@vladfrangu-dev/crawlee');
 
             automaticValue.crawlee = 'awesome!';
         },

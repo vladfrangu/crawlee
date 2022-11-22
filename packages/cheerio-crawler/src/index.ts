@@ -1,2 +1,2 @@
-export * from '@crawlee/http';
+export * from '@vladfrangu-dev/crawlee-http';
 export * from './internals/cheerio-crawler';

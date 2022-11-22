@@ -1,4 +1,4 @@
-import { Dataset, createPlaywrightRouter } from 'crawlee';
+import { Dataset, createPlaywrightRouter } from '@vladfrangu-dev/crawlee';
 
 export const router = createPlaywrightRouter();
 

@@ -1,4 +1,4 @@
-import { Dataset, launchPuppeteer } from 'crawlee';
+import { Dataset, launchPuppeteer } from '@vladfrangu-dev/crawlee';
 
 // Launch the web browser.
 const browser = await launchPuppeteer();

@@ -1,4 +1,4 @@
-# `@crawlee/http`
+# `@vladfrangu-dev/crawlee-http`
 
 Provides a framework for the parallel crawling of web pages using plain HTTP requests. The URLs to crawl are fed either from a static list of URLs or from a dynamic queue of URLs enabling recursive crawling of websites.
 
@@ -27,7 +27,7 @@ New requests are only dispatched when there is enough free CPU and memory availa
 ## Example usage
 
 ```javascript
-import { HttpCrawler, Dataset } from '@crawlee/http';
+import { HttpCrawler, Dataset } from '@vladfrangu-dev/crawlee-http';
 
 const crawler = new HttpCrawler({
     requestList,

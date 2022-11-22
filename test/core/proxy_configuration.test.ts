@@ -1,4 +1,4 @@
-import { ProxyConfiguration } from '@crawlee/core';
+import { ProxyConfiguration } from '@vladfrangu-dev/crawlee-core';
 
 const sessionId = 538909250932;
 

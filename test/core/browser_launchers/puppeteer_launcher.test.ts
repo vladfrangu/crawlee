@@ -10,8 +10,8 @@ import portastic from 'portastic';
 // @ts-expect-error no types
 import basicAuthParser from 'basic-auth-parser';
 import express from 'express';
-import { BrowserLauncher, launchPuppeteer } from '@crawlee/puppeteer';
-import type { Dictionary } from '@crawlee/utils';
+import { BrowserLauncher, launchPuppeteer } from '@vladfrangu-dev/crawlee-puppeteer';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-utils';
 import type { AddressInfo } from 'net';
 import type { Browser, Page } from 'puppeteer';
 import { runExampleComServer, startExpressAppPromise } from '../../shared/_helper';

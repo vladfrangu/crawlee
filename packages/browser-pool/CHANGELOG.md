@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.1.2 (2022-11-15)
 
-**Note:** Version bump only for package @crawlee/browser-pool
+**Note:** Version bump only for package @vladfrangu-dev/crawlee-browser-pool
 
 
 
@@ -13,7 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.1.1 (2022-11-07)
 
-**Note:** Version bump only for package @crawlee/browser-pool
+**Note:** Version bump only for package @vladfrangu-dev/crawlee-browser-pool
 
 
 
@@ -21,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 3.1.0 (2022-10-13)
 
-**Note:** Version bump only for package @crawlee/browser-pool
+**Note:** Version bump only for package @vladfrangu-dev/crawlee-browser-pool
 
 
 

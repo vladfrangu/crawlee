@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { PlaywrightCrawler, log } from '@crawlee/playwright';
+import { PlaywrightCrawler, log } from '@vladfrangu-dev/crawlee-playwright';
 import { ApifyStorageLocal } from '@apify/storage-local';
 
 process.env.APIFY_LOG_LEVEL = 'DEBUG';

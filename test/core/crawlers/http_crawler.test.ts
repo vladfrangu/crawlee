@@ -1,4 +1,4 @@
-import { HttpCrawler } from '@crawlee/http';
+import { HttpCrawler } from '@vladfrangu-dev/crawlee-http';
 import type { AddressInfo } from 'node:net';
 import http from 'node:http';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';

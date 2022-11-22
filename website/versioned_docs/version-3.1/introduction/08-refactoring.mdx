@@ -30,7 +30,7 @@ In the following code we've made several changes:
 In our `main.mjs` file, we place the general structure of the crawler:
 
 ```js title="src/main.mjs"
-import { PlaywrightCrawler, log } from 'crawlee';
+import { PlaywrightCrawler, log } from '@vladfrangu-dev/crawlee';
 import { router } from './routes.js';
 
 // This is better set with CRAWLEE_LOG_LEVEL env var
@@ -54,7 +54,7 @@ await crawler.run();
 Then in a separate `routes.mjs` file:
 
 ```js title="src/routes.mjs"
-import { createPlaywrightRouter, Dataset } from 'crawlee';
+import { createPlaywrightRouter, Dataset } from '@vladfrangu-dev/crawlee';
 
 // createPlaywrightRouter() is only a helper to get better
 // intellisense and typings. You can use Router.create() too.

@@ -5,7 +5,7 @@ import log from '@apify/log';
 import type {
     CrawlingContext,
     ErrorHandler,
-    RequestHandler } from '@crawlee/basic';
+    RequestHandler } from '@vladfrangu-dev/crawlee-basic';
 import {
     Request,
     RequestQueue,
@@ -17,18 +17,18 @@ import {
     NonRetryableError,
     CriticalError,
     MissingRouteError,
-} from '@crawlee/basic';
+} from '@vladfrangu-dev/crawlee-basic';
 import {
     AutoscaledPool, RequestState,
-} from '@crawlee/core';
+} from '@vladfrangu-dev/crawlee-core';
 import express from 'express';
-import type { Dictionary } from '@crawlee/utils';
-import { sleep } from '@crawlee/utils';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-utils';
+import { sleep } from '@vladfrangu-dev/crawlee-utils';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';
 import { startExpressAppPromise } from '../../shared/_helper';
 
-jest.mock('@crawlee/core', () => {
-    const originalModule = jest.requireActual('@crawlee/core');
+jest.mock('@vladfrangu-dev/crawlee-core', () => {
+    const originalModule = jest.requireActual('@vladfrangu-dev/crawlee-core');
     const AutoscaledPoolMockConstructor = jest.fn((...args) => new originalModule.AutoscaledPool(...args));
     return {
         ...originalModule,

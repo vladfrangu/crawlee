@@ -1,5 +1,5 @@
 {
-    "name": "@crawlee/http",
+    "name": "@vladfrangu-dev/crawlee-http",
     "version": "3.1.2",
     "description": "The scalable web crawling and scraping library for JavaScript/Node.js. Enables development of data extraction and web automation jobs (not only) with headless Chrome and Puppeteer.",
     "engines": {
@@ -55,8 +55,8 @@
     "dependencies": {
         "@apify/timeout": "^0.3.0",
         "@apify/utilities": "^2.0.0",
-        "@crawlee/basic": "^3.1.2",
-        "@crawlee/types": "^3.1.2",
+        "@vladfrangu-dev/crawlee-basic": "^3.1.2",
+        "@vladfrangu-dev/crawlee-types": "^3.1.2",
         "@types/content-type": "^1.1.5",
         "content-type": "^1.0.4",
         "got-scraping": "^3.2.9",

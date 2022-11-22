@@ -6,11 +6,11 @@ import type {
     PlaywrightGotoOptions,
     PlaywrightRequestHandler,
     Request,
-} from '@crawlee/playwright';
+} from '@vladfrangu-dev/crawlee-playwright';
 import {
     PlaywrightCrawler,
     RequestList,
-} from '@crawlee/playwright';
+} from '@vladfrangu-dev/crawlee-playwright';
 import type { Server } from 'http';
 import type { AddressInfo } from 'net';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';

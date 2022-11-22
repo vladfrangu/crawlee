@@ -2,7 +2,7 @@ import {
     downloadListOfUrls,
     extractUrls,
     URL_WITH_COMMAS_REGEX,
-} from '@crawlee/utils';
+} from '@vladfrangu-dev/crawlee-utils';
 import { gotScraping } from 'got-scraping';
 import fs from 'node:fs';
 import path from 'node:path';

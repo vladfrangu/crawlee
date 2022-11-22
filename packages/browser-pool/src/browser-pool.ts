@@ -216,7 +216,7 @@ export interface BrowserPoolHooks<
  *
  * **Example:**
  * ```js
- * import { BrowserPool, PlaywrightPlugin } from '@crawlee/browser-pool';
+ * import { BrowserPool, PlaywrightPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
  * import playwright from 'playwright';
  *
  * const browserPool = new BrowserPool({

@@ -49,19 +49,13 @@ The following code demonstrates the usage of the request queue:
 
 <Tabs groupId="request_queue">
     <TabItem value="crawler" label="Usage with Crawler" default>
-        <CodeBlock language="js">
-            {CrawlerSource}
-        </CodeBlock>
+        <CodeBlock language="js">{CrawlerSource}</CodeBlock>
     </TabItem>
     <TabItem value="crawler_explicit" label="Explicit usage with Crawler">
-        <CodeBlock language="js">
-            {CrawlerExplicitSource}
-        </CodeBlock>
+        <CodeBlock language="js">{CrawlerExplicitSource}</CodeBlock>
     </TabItem>
     <TabItem value="basic_operations" label="Basic Operations" default>
-        <CodeBlock language="js">
-            {BasicOperationsSource}
-        </CodeBlock>
+        <CodeBlock language="js">{BasicOperationsSource}</CodeBlock>
     </TabItem>
 </Tabs>
 
@@ -78,7 +72,7 @@ In Crawlee, the request list is represented by the <ApiLink to="core/class/Reque
 The following code demonstrates basic operations of the request list:
 
 ```javascript
-import { RequestList, PuppeteerCrawler } from 'crawlee';
+import { RequestList, PuppeteerCrawler } from '@vladfrangu-dev/crawlee';
 
 // Prepare the sources array with URLs to visit
 const sources = [
@@ -122,14 +116,10 @@ However, now we could use the <ApiLink to="core/class/RequestQueue#addRequests">
 
 <Tabs groupId="queue_list">
     <TabItem value="add_requests" label="Request Queue" default>
-        <CodeBlock language="js">
-            {RequestQueueAddRequestsSource}
-        </CodeBlock>
+        <CodeBlock language="js">{RequestQueueAddRequestsSource}</CodeBlock>
     </TabItem>
     <TabItem value="queue_list" label="Request Queue + Request List">
-        <CodeBlock language="js">
-            {RequestQueueListSource}
-        </CodeBlock>
+        <CodeBlock language="js">{RequestQueueListSource}</CodeBlock>
     </TabItem>
 </Tabs>
 
@@ -138,7 +128,7 @@ However, now we could use the <ApiLink to="core/class/RequestQueue#addRequests">
 Default storages are purged before the crawler starts if not specified otherwise. This happens as early as when we try to open some storage (e.g. via `RequestQueue.open()`) or when we try to work with a default storage via one of the helper methods (e.g. `crawler.addRequests()` that under the hood calls `RequestQueue.open()`). If we don't work with storages explicitly in our code, the purging will eventually happen when the `run` method of our crawler is executed. In case we need to purge the storages sooner, we can use the <ApiLink to="core/function/purgeDefaultStorages">`purgeDefaultStorages()`</ApiLink> helper explicitly:
 
 ```javascript
-import { purgeDefaultStorages } from 'crawlee';
+import { purgeDefaultStorages } from '@vladfrangu-dev/crawlee';
 
 await purgeDefaultStorages();
 ```

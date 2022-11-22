@@ -1,4 +1,4 @@
-import type { Request, RequestOptions } from 'crawlee';
+import type { Request, RequestOptions } from '@vladfrangu-dev/crawlee';
 import {
     RequestQueue,
     puppeteerClickElements,
@@ -7,7 +7,7 @@ import {
     playwrightClickElements,
     puppeteerUtils,
     playwrightUtils,
-} from 'crawlee';
+} from '@vladfrangu-dev/crawlee';
 import type { Browser as PPBrowser, Target } from 'puppeteer';
 import type { Browser as PWBrowser, Page as PWPage } from 'playwright';
 

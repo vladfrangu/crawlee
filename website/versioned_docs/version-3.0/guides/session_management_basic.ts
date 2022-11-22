@@ -1,4 +1,4 @@
-import { BasicCrawler, ProxyConfiguration } from 'crawlee';
+import { BasicCrawler, ProxyConfiguration } from '@vladfrangu-dev/crawlee';
 import { gotScraping } from 'got-scraping';
 
 const proxyConfiguration = new ProxyConfiguration({ /* opts */ });

@@ -1,4 +1,4 @@
-import type { Dictionary } from '@crawlee/types';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-types';
 import { normalizeUrl } from '@apify/utilities';
 import type { BinaryLike } from 'node:crypto';
 import crypto from 'node:crypto';

@@ -1,5 +1,5 @@
 import ow from 'ow';
-import { weightedAvg } from '@crawlee/utils';
+import { weightedAvg } from '@vladfrangu-dev/crawlee-utils';
 import { Snapshotter } from './snapshotter';
 import type { Configuration } from '../configuration';
 

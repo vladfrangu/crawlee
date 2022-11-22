@@ -1,6 +1,6 @@
 import log from '@apify/log';
-import { Configuration, deserializeArray, EventType, KeyValueStore, ProxyConfiguration, Request, RequestList } from '@crawlee/core';
-import { sleep } from '@crawlee/utils';
+import { Configuration, deserializeArray, EventType, KeyValueStore, ProxyConfiguration, Request, RequestList } from '@vladfrangu-dev/crawlee-core';
+import { sleep } from '@vladfrangu-dev/crawlee-utils';
 import { gotScraping } from 'got-scraping';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';
 

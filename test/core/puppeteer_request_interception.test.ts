@@ -1,5 +1,5 @@
-import { launchPuppeteer, utils } from 'crawlee';
-import { sleep } from '@crawlee/utils';
+import { launchPuppeteer, utils } from '@vladfrangu-dev/crawlee';
+import { sleep } from '@vladfrangu-dev/crawlee-utils';
 import express from 'express';
 import type { Server } from 'http';
 import type { AddressInfo } from 'net';

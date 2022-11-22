@@ -1,4 +1,4 @@
-# `@crawlee/basic`
+# `@vladfrangu-dev/crawlee-basic`
 
 Provides a simple framework for parallel crawling of web pages. The URLs to crawl are fed either from a static list of URLs or from a dynamic queue of URLs enabling recursive crawling of websites.
 
@@ -16,7 +16,7 @@ New requests are only dispatched when there is enough free CPU and memory availa
 ## Example usage
 
 ```javascript
-import { BasicCrawler, Dataset } from 'crawlee';
+import { BasicCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 // Create a crawler instance
 const crawler = new BasicCrawler({

@@ -1,4 +1,4 @@
-import type * as storage from '@crawlee/types';
+import type * as storage from '@vladfrangu-dev/crawlee-types';
 import { s } from '@sapphire/shapeshift';
 import { resolve } from 'path';
 import { findOrCacheDatasetByPossibleId } from '../cache-helpers';

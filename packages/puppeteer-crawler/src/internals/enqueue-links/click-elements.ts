@@ -6,16 +6,16 @@ import type {
     UrlPatternObject,
     RequestQueue,
     RequestOptions,
-} from '@crawlee/browser';
+} from '@vladfrangu-dev/crawlee-browser';
 import {
     constructGlobObjectsFromGlobs,
     constructRegExpObjectsFromPseudoUrls,
     constructRegExpObjectsFromRegExps,
     createRequests,
     createRequestOptions,
-} from '@crawlee/browser';
+} from '@vladfrangu-dev/crawlee-browser';
 import log_ from '@apify/log';
-import type { Dictionary, BatchAddRequestsResult } from '@crawlee/types';
+import type { Dictionary, BatchAddRequestsResult } from '@vladfrangu-dev/crawlee-types';
 import ow from 'ow';
 import type {
     ClickOptions,

@@ -1,4 +1,4 @@
-import { CheerioCrawler } from 'crawlee';
+import { CheerioCrawler } from '@vladfrangu-dev/crawlee';
 
 // The crawler will automatically process requests from the queue.
 // It's used the same way for Puppeteer/Playwright crawlers.

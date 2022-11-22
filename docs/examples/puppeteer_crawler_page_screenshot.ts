@@ -1,4 +1,4 @@
-import { PuppeteerCrawler, KeyValueStore } from 'crawlee';
+import { PuppeteerCrawler, KeyValueStore } from '@vladfrangu-dev/crawlee';
 
 // Create a PuppeteerCrawler
 const crawler = new PuppeteerCrawler({

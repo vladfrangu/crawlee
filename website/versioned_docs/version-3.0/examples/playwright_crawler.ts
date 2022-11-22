@@ -1,4 +1,4 @@
-import { Dataset, PlaywrightCrawler } from 'crawlee';
+import { Dataset, PlaywrightCrawler } from '@vladfrangu-dev/crawlee';
 
 // Create an instance of the PlaywrightCrawler class - a crawler
 // that automatically loads the URLs in headless Chrome / Playwright.

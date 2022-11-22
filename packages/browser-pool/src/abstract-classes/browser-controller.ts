@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 import { TypedEmitter } from 'tiny-typed-emitter';
 import { tryCancel } from '@apify/timeout';
-import type { Cookie, Dictionary } from '@crawlee/types';
+import type { Cookie, Dictionary } from '@vladfrangu-dev/crawlee-types';
 import { BROWSER_CONTROLLER_EVENTS } from '../events';
 import type { LaunchContext } from '../launch-context';
 import { log } from '../logger';

@@ -2,7 +2,7 @@ import { getDomain } from 'tldts';
 import ow from 'ow';
 import log from '@apify/log';
 import type { SetRequired } from 'type-fest';
-import type { BatchAddRequestsResult, Dictionary } from '@crawlee/types';
+import type { BatchAddRequestsResult, Dictionary } from '@vladfrangu-dev/crawlee-types';
 import type { GlobInput, PseudoUrlInput, RegExpInput, RequestTransform, UrlPatternObject } from './shared';
 import {
     filterRequestsByPatterns,

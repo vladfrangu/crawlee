@@ -1,7 +1,7 @@
 import { MAX_PAYLOAD_SIZE_BYTES } from '@apify/consts';
 import ow from 'ow';
 import { stringify } from 'csv-stringify/sync';
-import type { DatasetClient, DatasetInfo, Dictionary, StorageClient } from '@crawlee/types';
+import type { DatasetClient, DatasetInfo, Dictionary, StorageClient } from '@vladfrangu-dev/crawlee-types';
 import { Configuration } from '../configuration';
 import { log } from '../log';
 import type { Awaitable } from '../typedefs';

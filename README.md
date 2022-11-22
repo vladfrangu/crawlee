@@ -2,7 +2,7 @@
     <a href="https://crawlee.dev">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/apify/crawlee/master/website/static/img/crawlee-dark.svg?sanitize=true">
-          <img alt="Crawlee" src="https://raw.githubusercontent.com/apify/crawlee/master/website/static/img/crawlee-light.svg?sanitize=true" width="500">
+          <img alt="@vladfrangu-dev/crawlee" src="https://raw.githubusercontent.com/apify/crawlee/master/website/static/img/crawlee-light.svg?sanitize=true" width="500">
         </picture>
     </a>
     <br>
@@ -10,8 +10,8 @@
 </h1>
 
 <p align=center>
-    <a href="https://www.npmjs.com/package/@crawlee/core" rel="nofollow"><img src="https://img.shields.io/npm/v/@crawlee/core.svg" alt="NPM latest version" data-canonical-src="https://img.shields.io/npm/v/@crawlee/core/next.svg" style="max-width: 100%;"></a>
-    <a href="https://www.npmjs.com/package/@crawlee/core" rel="nofollow"><img src="https://img.shields.io/npm/dm/@crawlee/core.svg" alt="Downloads" data-canonical-src="https://img.shields.io/npm/dm/@crawlee/core.svg" style="max-width: 100%;"></a>
+    <a href="https://www.npmjs.com/package/@vladfrangu-dev/crawlee-core" rel="nofollow"><img src="https://img.shields.io/npm/v/@vladfrangu-dev/crawlee-core.svg" alt="NPM latest version" data-canonical-src="https://img.shields.io/npm/v/@vladfrangu-dev/crawlee-core/next.svg" style="max-width: 100%;"></a>
+    <a href="https://www.npmjs.com/package/@vladfrangu-dev/crawlee-core" rel="nofollow"><img src="https://img.shields.io/npm/dm/@vladfrangu-dev/crawlee-core.svg" alt="Downloads" data-canonical-src="https://img.shields.io/npm/dm/@vladfrangu-dev/crawlee-core.svg" style="max-width: 100%;"></a>
     <a href="https://discord.gg/jyEM2PRvMU" rel="nofollow"><img src="https://img.shields.io/discord/801163717915574323?label=discord" alt="Chat on discord" data-canonical-src="https://img.shields.io/discord/801163717915574323?label=discord" style="max-width: 100%;"></a>
     <a href="https://github.com/apify/crawlee/actions/workflows/test-and-release.yml"><img src="https://github.com/apify/crawlee/actions/workflows/test-and-release.yml/badge.svg?branch=master" alt="Build Status" style="max-width: 100%;"></a>
 </p>
@@ -53,7 +53,7 @@ npm install crawlee playwright
 ```
 
 ```js
-import { PlaywrightCrawler, Dataset } from 'crawlee';
+import { PlaywrightCrawler, Dataset } from '@vladfrangu-dev/crawlee';
 
 // PlaywrightCrawler crawls the web using a headless
 // browser controlled by the Playwright library.

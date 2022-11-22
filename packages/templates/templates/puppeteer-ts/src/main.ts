@@ -1,5 +1,5 @@
 // For more information, see https://crawlee.dev/
-import { PuppeteerCrawler, log } from 'crawlee';
+import { PuppeteerCrawler, log } from '@vladfrangu-dev/crawlee';
 import { router } from './routes.js';
 
 const startUrls = ['https://crawlee.dev'];

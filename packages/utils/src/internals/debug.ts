@@ -1,5 +1,5 @@
 import type { IncomingMessage } from 'node:http';
-import type { Dictionary, AllowedHttpMethods } from '@crawlee/types';
+import type { Dictionary, AllowedHttpMethods } from '@vladfrangu-dev/crawlee-types';
 import ow from 'ow';
 
 interface BrowserResponseLike {

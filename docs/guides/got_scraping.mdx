@@ -9,7 +9,7 @@ description: Blazing fast cURL alternative for modern web scraping
 When using `BasicCrawler`, we have to send the requests manually. In order to do this, we can use the context-aware `sendRequest()` function:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new BasicCrawler({
     async requestHandler({ sendRequest, log }) {
@@ -52,25 +52,25 @@ async sendRequest(overrideOptions?: GotOptionsInit) => {
 
 By default, it's the URL of current task. However you can override this with a `string` or a `URL` instance if necessary.
 
-*More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#url).*
+_More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#url)._
 
 ### `method`
 
 By default, it's the HTTP method of current task. Possible values are `'GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'`.
 
-*More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#method).*
+_More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#method)._
 
 ### `body`
 
 By default, it's the HTTP payload of current task.
 
-*More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#body).*
+_More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#body)._
 
 ### `headers`
 
 By default, it's the HTTP headers of current task. It's an object with `string` values.
 
-*More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#headers).*
+_More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#headers)._
 
 ### `proxyUrl`
 
@@ -81,7 +81,7 @@ For example, an Apify proxy server looks like this: `http://auto:password@proxy.
 Basic Crawler does not have the concept of a session or proxy, therefore we need to manually pass the `proxyUrl` option:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new BasicCrawler({
     async requestHandler({ sendRequest, log }) {
@@ -95,14 +95,14 @@ const crawler = new BasicCrawler({
 
 We use proxies to hide our real IP address.
 
-*More details in [Got Scraping documentation](https://github.com/apify/got-scraping#proxyurl).*
+_More details in [Got Scraping documentation](https://github.com/apify/got-scraping#proxyurl)._
 
 ### `sessionToken`
 
 It's a non-primitive object used as a key when generating browser fingerprint. Fingerprints with the same token don't change.
 This can be used to retain the `user-agent` header when using the same Apify Session.
 
-*More details in [Got Scraping documentation](https://github.com/apify/got-scraping#sessiontoken).*
+_More details in [Got Scraping documentation](https://github.com/apify/got-scraping#sessiontoken)._
 
 ### `responseType`
 
@@ -111,7 +111,7 @@ This option defines how the response should be parsed.
 By default, we fetch HTML websites - that is plaintext. Hence, we set `responseType` to `'text'`. However, JSON is possible as well:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new BasicCrawler({
     async requestHandler({ sendRequest, log }) {
@@ -121,7 +121,7 @@ const crawler = new BasicCrawler({
 });
 ```
 
-*More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#responsetype).*
+_More details in [Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#responsetype)._
 
 ### `cookieJar`
 
@@ -130,7 +130,7 @@ const crawler = new BasicCrawler({
 Example:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 import { CookieJar } from 'tough-cookie';
 
 const cookieJar = new CookieJar();
@@ -143,9 +143,10 @@ const crawler = new BasicCrawler({
 });
 ```
 
-*More details in*
-- *[Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#cookiejar)*
-- *[Tough Cookie documentation](https://github.com/salesforce/tough-cookie#cookiejarstore-options)*
+_More details in_
+
+-   _[Got documentation](https://github.com/sindresorhus/got/blob/main/documentation/2-options.md#cookiejar)_
+-   _[Tough Cookie documentation](https://github.com/salesforce/tough-cookie#cookiejarstore-options)_
 
 ### `retry.limit`
 
@@ -164,7 +165,7 @@ It's a boolean for whether to generate browser headers. By default, it's set to 
 This option represents an object how to generate browser fingerprint. Example:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new BasicCrawler({
     async requestHandler({ sendRequest, log }) {
@@ -181,10 +182,10 @@ const crawler = new BasicCrawler({
 });
 ```
 
-*More details in [`HeaderGeneratorOptions` documentation](https://apify.github.io/fingerprint-suite/api/fingerprint-generator/interface/HeaderGeneratorOptions/).*
+_More details in [`HeaderGeneratorOptions` documentation](https://apify.github.io/fingerprint-suite/api/fingerprint-generator/interface/HeaderGeneratorOptions/)._
 
 **Related links**
 
-- [Got documentation](https://github.com/sindresorhus/got#documentation)
-- [Got Scraping documentation](https://github.com/apify/got-scraping)
-- [Header Generator documentation](https://apify.github.io/fingerprint-suite/docs/guides/fingerprint-generator/)
+-   [Got documentation](https://github.com/sindresorhus/got#documentation)
+-   [Got Scraping documentation](https://github.com/apify/got-scraping)
+-   [Header Generator documentation](https://apify.github.io/fingerprint-suite/docs/guides/fingerprint-generator/)

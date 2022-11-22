@@ -1,5 +1,5 @@
-import type { PrePageCreateHook, PuppeteerController, PlaywrightController } from '@crawlee/browser-pool';
-import { BrowserPool, PuppeteerPlugin, PlaywrightPlugin } from '@crawlee/browser-pool';
+import type { PrePageCreateHook, PuppeteerController, PlaywrightController } from '@vladfrangu-dev/crawlee-browser-pool';
+import { BrowserPool, PuppeteerPlugin, PlaywrightPlugin } from '@vladfrangu-dev/crawlee-browser-pool';
 import http from 'node:http';
 import type { AddressInfo } from 'node:net';
 import puppeteer from 'puppeteer';

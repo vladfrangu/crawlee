@@ -1,4 +1,4 @@
-import type { Request } from '@crawlee/core';
+import type { Request } from '@vladfrangu-dev/crawlee-core';
 import {
     constructGlobObjectsFromGlobs,
     constructRegExpObjectsFromPseudoUrls,
@@ -6,7 +6,7 @@ import {
     createRequests,
     createRequestOptions,
     validateGlobPattern,
-} from '@crawlee/core';
+} from '@vladfrangu-dev/crawlee-core';
 
 describe('Enqueue links shared functions', () => {
     describe('constructGlobObjectsFromGlobs()', () => {

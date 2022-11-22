@@ -12,15 +12,13 @@ import CheerioSource from '!!raw-loader!./crawl_sitemap_cheerio.ts';
 import PuppeteerSource from '!!raw-loader!./crawl_sitemap_puppeteer.ts';
 import PlaywrightSource from '!!raw-loader!./crawl_sitemap_playwright.ts';
 
-This example downloads and crawls the URLs from a sitemap, by using the <ApiLink to="utils/function/downloadListOfUrls">`downloadListOfUrls`</ApiLink> utility method provided by the <ApiLink to="utils">`@crawlee/utils`</ApiLink> module.
+This example downloads and crawls the URLs from a sitemap, by using the <ApiLink to="utils/function/downloadListOfUrls">`downloadListOfUrls`</ApiLink> utility method provided by the <ApiLink to="utils">`@vladfrangu-dev/crawlee-utils`</ApiLink> module.
 
 <Tabs groupId="crawler-type">
 
 <TabItem value="cheerio_crawler" label="Cheerio Crawler" default>
 
-<CodeBlock className="language-js">
-	{CheerioSource}
-</CodeBlock>
+<CodeBlock className="language-js">{CheerioSource}</CodeBlock>
 
 </TabItem>
 
@@ -32,9 +30,7 @@ To run this example on the Apify Platform, select the `apify/actor-node-puppetee
 
 :::
 
-<CodeBlock className="language-js">
-	{PuppeteerSource}
-</CodeBlock>
+<CodeBlock className="language-js">{PuppeteerSource}</CodeBlock>
 
 </TabItem>
 
@@ -46,9 +42,7 @@ To run this example on the Apify Platform, select the `apify/actor-node-playwrig
 
 :::
 
-<CodeBlock className="language-js">
-	{PlaywrightSource}
-</CodeBlock>
+<CodeBlock className="language-js">{PlaywrightSource}</CodeBlock>
 
 </TabItem>
 

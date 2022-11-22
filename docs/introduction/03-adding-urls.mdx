@@ -1,6 +1,6 @@
 ---
 id: adding-urls
-title: "Adding more URLs"
+title: 'Adding more URLs'
 description: Your first steps into the world of scraping with Crawlee
 ---
 
@@ -19,14 +19,14 @@ In the previous lesson you built a very simple crawler that downloads HTML of a 
 it to the console. This is the original source code:
 
 ```ts
-import { CheerioCrawler } from 'crawlee';
+import { CheerioCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new CheerioCrawler({
     async requestHandler({ $, request }) {
         const title = $('title').text();
         console.log(`The title of "${request.url}" is: ${title}.`);
-    }
-})
+    },
+});
 
 await crawler.run(['https://crawlee.dev']);
 ```
@@ -53,7 +53,7 @@ The `enqueueLinks` function is context aware. It means that it will read the inf
 
 ## Limit your crawls with `maxRequestsPerCrawl`
 
- When you're just testing your code or when your crawler could potentially find millions of links, it's very useful to set a maximum limit of crawled pages. The option is called `maxRequestsPerCrawl`, is available in all crawlers, and you can set it like this:
+When you're just testing your code or when your crawler could potentially find millions of links, it's very useful to set a maximum limit of crawled pages. The option is called `maxRequestsPerCrawl`, is available in all crawlers, and you can set it like this:
 
 ```ts
 const crawler = new CheerioCrawler({
@@ -64,31 +64,36 @@ const crawler = new CheerioCrawler({
 
 This means that no new requests will be started after the 20th request is finished. The actual number of processed requests might be a little higher thanks to parallelization, because the running requests won't be forcefully aborted. It's not even possible in most cases.
 
-
 ## Finding new links
 
 There are numerous approaches to finding links to follow when crawling the web. For our purposes, we will be looking for `<a>` elements that contain the `href` attribute because that's what you need in most cases. For example:
 
 ```html
-<a href="https://crawlee.dev/docs/introduction">This is a link to Crawlee introduction</a>
+<a href="https://crawlee.dev/docs/introduction"
+    >This is a link to Crawlee introduction</a
+>
 ```
 
 Since this is the most common case, it is also the `enqueueLinks` default.
 
 <Tabs groupId="crawling-links">
-<TabItem value="enqueue-links" label="with enqueueLinks" default>
-<CodeBlock language="js" title="src/main.mjs">{FindWithELSource}</CodeBlock>
-</TabItem>
-<TabItem value="plain-js" label="without enqueueLinks">
-<CodeBlock language="js" title="src/main.mjs">{FindWithoutELSource}</CodeBlock>
-</TabItem>
+    <TabItem value="enqueue-links" label="with enqueueLinks" default>
+        <CodeBlock language="js" title="src/main.mjs">
+            {FindWithELSource}
+        </CodeBlock>
+    </TabItem>
+    <TabItem value="plain-js" label="without enqueueLinks">
+        <CodeBlock language="js" title="src/main.mjs">
+            {FindWithoutELSource}
+        </CodeBlock>
+    </TabItem>
 </Tabs>
 
 If you need to override the default selection of elements in `enqueueLinks`, you can use the `selector` argument.
 
 ```ts
 await enqueueLinks({
-    selector: 'div.has-link'
+    selector: 'div.has-link',
 });
 ```
 
@@ -98,10 +103,14 @@ Websites typically contain a lot of links that lead away from the original page.
 
 <Tabs groupId="crawling-links">
     <TabItem value="enqueue-links" label="with enqueueLinks" default>
-        <CodeBlock language="js" title="src/main.mjs">{FilterWithELSource}</CodeBlock>
+        <CodeBlock language="js" title="src/main.mjs">
+            {FilterWithELSource}
+        </CodeBlock>
     </TabItem>
     <TabItem value="plain-js" label="without enqueueLinks">
-        <CodeBlock language="js" title="src/main.mjs">{FilterWithoutELSource}</CodeBlock>
+        <CodeBlock language="js" title="src/main.mjs">
+            {FilterWithoutELSource}
+        </CodeBlock>
     </TabItem>
 </Tabs>
 
@@ -109,11 +118,11 @@ The default behavior of `enqueueLinks` is to stay on the same hostname. This **d
 
 ```ts
 await enqueueLinks({
-    strategy: 'same-domain'
+    strategy: 'same-domain',
 });
 ```
 
-When you run the code, you will see the crawler  log the **title** of the first page, then the **enqueueing** message showing number of URLs, followed by the **title** of the first enqueued page and so on and so on.
+When you run the code, you will see the crawler log the **title** of the first page, then the **enqueueing** message showing number of URLs, followed by the **title** of the first enqueued page and so on and so on.
 
 ## Skipping duplicate URLs
 

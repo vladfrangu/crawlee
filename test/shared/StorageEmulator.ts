@@ -1,5 +1,5 @@
 import { rm } from 'node:fs/promises';
-import { StorageManager } from '@crawlee/core';
+import { StorageManager } from '@vladfrangu-dev/crawlee-core';
 
 export abstract class StorageEmulator {
     protected localStorageDirectories: string[] = [];

@@ -9,7 +9,7 @@ description: Blazing fast cURL alternative for modern web scraping
 When using `BasicCrawler`, we have to send the requests manually. In order to do this, we can use the context-aware `sendRequest()` function:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new BasicCrawler({
     async requestHandler({ sendRequest, log }) {
@@ -81,7 +81,7 @@ For example, an Apify proxy server looks like this: `http://auto:password@proxy.
 Basic Crawler does not have the concept of a session or proxy, therefore we need to manually pass the `proxyUrl` option:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new BasicCrawler({
     async requestHandler({ sendRequest, log }) {
@@ -111,7 +111,7 @@ This option defines how the response should be parsed.
 By default, we fetch HTML websites - that is plaintext. Hence, we set `responseType` to `'text'`. However, JSON is possible as well:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new BasicCrawler({
     async requestHandler({ sendRequest, log }) {
@@ -130,7 +130,7 @@ const crawler = new BasicCrawler({
 Example:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 import { CookieJar } from 'tough-cookie';
 
 const cookieJar = new CookieJar();
@@ -164,7 +164,7 @@ It's a boolean for whether to generate browser headers. By default, it's set to 
 This option represents an object how to generate browser fingerprint. Example:
 
 ```ts
-import { BasicCrawler } from 'crawlee';
+import { BasicCrawler } from '@vladfrangu-dev/crawlee';
 
 const crawler = new BasicCrawler({
     async requestHandler({ sendRequest, log }) {

@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { Dataset, PlaywrightCrawler } from '@crawlee/playwright';
+import { Dataset, PlaywrightCrawler } from '@vladfrangu-dev/crawlee-playwright';
 import { ApifyStorageLocal } from '@apify/storage-local';
 
 const mainOptions = {

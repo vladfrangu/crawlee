@@ -1,5 +1,5 @@
-import { maybeStringify, Configuration, KeyValueStore } from '@crawlee/core';
-import type { Dictionary } from '@crawlee/utils';
+import { maybeStringify, Configuration, KeyValueStore } from '@vladfrangu-dev/crawlee-core';
+import type { Dictionary } from '@vladfrangu-dev/crawlee-utils';
 import { PassThrough } from 'stream';
 import { MemoryStorageEmulator } from 'test/shared/MemoryStorageEmulator';
 

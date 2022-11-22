@@ -1,4 +1,4 @@
-import { SessionPool } from 'crawlee';
+import { SessionPool } from '@vladfrangu-dev/crawlee';
 
 // Override the default Session pool configuration.
 const sessionPoolOptions = {

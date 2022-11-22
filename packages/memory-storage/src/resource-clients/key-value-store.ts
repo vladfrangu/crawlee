@@ -1,4 +1,4 @@
-import type * as storage from '@crawlee/types';
+import type * as storage from '@vladfrangu-dev/crawlee-types';
 import { s } from '@sapphire/shapeshift';
 import mime from 'mime-types';
 import { randomUUID } from 'node:crypto';
