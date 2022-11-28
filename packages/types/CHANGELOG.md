@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/apify/crawlee/compare/v3.2.0...v3.3.0) (2022-11-28)
+
+
+### Features
+
+* export new interface ([aa94b48](https://github.com/apify/crawlee/commit/aa94b48227c850187fd7d7dde3a41c7cdc63466c))
+
+
+
+
+
 # 3.2.0 (2022-11-22)
 
 
